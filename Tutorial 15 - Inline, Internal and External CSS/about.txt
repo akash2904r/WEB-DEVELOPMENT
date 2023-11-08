@@ -1,0 +1,23 @@
+There are three ways to use CSS in a HTML code :
+
+1) Inline CSS : In this method, we will be using the style attribute of an element to style the html file. 
+For example, <h1 style="color: cyan; background-color: black;"></h1>
+
+    -> (One of the disadvantage why we don't use this method is because, mass editing is not possible)
+
+
+
+2) Internal CSS : In this method, we will be using a <style> tag just after the title tag in the head of the html file.
+For example, 
+<style>
+    h1{
+        color: cyan;
+        background-color: black;
+    }
+</style>
+
+    -> (One of the disadvantage why we don't use this method is because, our HTML file keeps growing as we add the CSS selectors and their properties one by one into the style tag)
+
+
+
+3) External CSS : In this method, we will be using a .css file and linking it to the html file using a link tag

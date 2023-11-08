@@ -1,0 +1,22 @@
+Entites are used when the synatx of html and the content that we are willing to write collides
+
+For example, if we want to write the syntax of paragraph tag i.e., <p></p>, as a content. If we directly write it as <p></p> itself then according to html it will considered as a paragraph itself. So we use, &lt; for the '<' and &gt; for '>' symbol.
+
+Therefore to write paragraph tag as a content we must write it as &lt;p&gt;&lt;/p&gt;
+Where lt means lower than and gt means greater than
+
+<pre> -> This tag is used to keep the spaces left and the new lines intact or as it is. But for tags we must use entites only
+
+&copy; -> This is used to get the copyright symbol i.e., ©
+
+&nbsp; -> This is used for leaving spaces, as html doesn't consider spaces more than one
+
+<blockquote> -> When we write some text with these tags it is considered as quotations by the browser
+
+blockquote also has an attribute 'cite="source-url"' used to cite texts. We must give the url has the value for cite attribute
+
+<q> -> This is also same as blockquote tag. This tag also has cite attribute. But when we use this tag, we can see the quotation symbols "" in our website
+
+<code> -> If any type of code is required to be written, we can use code tag and write the code inside it, so that the browser can understand it in a better way
+
+<canvas> -> It is an element used to make graphical shapes

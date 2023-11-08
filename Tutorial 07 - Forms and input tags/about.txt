@@ -1,0 +1,20 @@
+Forms <form action=""> -> We have two actions, one is post and other is get. post is used to send data to server and get is used to fetch data from server
+
+<div> -> This is also an tag used just like <br> tag. But div is perfered over br (div is an block element)
+
+<label> -> This tag is used to tell about a specific input tag i.e., it has an attribute for="" inside which we must write the id of the input tag, then this tag would showcase the info written about the input tag beside it
+
+<input> -> This has many attributes. Some of them discussed in this lecture are:
+1) type : It helps us to know what type of input is it taking. Ex: radio, checkbox, etc. (In radio, if the name attribute of all input blocks are same then only one can be chosen as the input)
+2) name : It helps during processing in server
+3) id : It is just like an aadhar card for an citizen
+4) value : It is also using during processing in server
+5) placeholder : It is the text written inside the input blocks in the website, which can be seen but actually aren't written in the input block
+6) autofocus : The input block which has this attribute will be defaultly focused. i.e., if we directly start typing once we open the website, the text typed by us would be inside this particular input block which contain autofocus
+
+<select> -> This is also an input tag, just like radio only one option can be selected as an input
+<option> -> This is used within select block, to give various options to choose from
+
+<textarea> -> This is also an input tag, but we can change the size of the input block as we wish => It contains the attributes row="" and col=""
+
+Since select and textarea are also input tags, they too have all the attributes mentioned above

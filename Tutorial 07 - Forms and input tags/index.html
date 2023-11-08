@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1>Form to explain more about your coding practices</h1>
+    <form action="post">
+        <div>
+            <label for="username">Enter your username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" autofocus>
+        </div>
+
+        <div>
+            <h3>Enter the language that you prefer to use:</h3>
+
+            <input type="radio" id="c++" name="language" value="c++">
+            <label for="c++">C++</label>
+            <input type="radio" id="java" name="language" value="java">
+            <label for="java">Java</label>
+            <input type="radio" id="python" name="language" value="python">
+            <label for="python">Python</label>
+            <input type="radio" id="javascript" name="language" value="javascript">
+            <label for="javascript">JavaScript</label>
+        </div>
+
+        <div>
+            <h3>What are the sources that you used to learn the language?</h3>
+
+            <input type="checkbox" name="source" id="youtube" value="youtube">
+            <label for="youtube">YouTube</label>
+            <input type="checkbox" name="source" id="course" value="course">
+            <label for="course">Course</label>
+            <input type="checkbox" name="source" id="documentation" value="documentation">
+            <label for="documentation">Documentation</label>
+            <input type="checkbox" name="source" id="others" value="others">
+            <label for="others">Others</label>
+        </div>
+
+        <div>
+            <h3>Name one more langauge that you would prefer:</h3>
+
+            <select name="language">
+                <option value="c++">C++</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="comment">Leave a comment</label>
+            <br>
+            <textarea name="comment" id="comment" placeholder="Why did you choose this language?" cols="50" rows="4"></textarea>
+        </div>
+
+    </form>
+</body>
+
+</html>

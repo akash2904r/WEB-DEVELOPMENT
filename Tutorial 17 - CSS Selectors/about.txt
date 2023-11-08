@@ -1,0 +1,25 @@
+Types of selectors :
+
+1) Element Selector : It is an selector made using an element
+For example, div in the html file
+
+2) Class Selector : An class selector is declared by using .class_value
+For example, .red in the html file (Since a div contains the class value as red, the style written inside this selector is applied for that particular div)
+
+3) Id Selector : An id selector is declared by using #id_value 
+For example, #green in the html file
+
+4) Child Selector : Let's use an example to understand this
+For example, (div > p) This means an paragraph tag under an div tag i.e., it should be an direct child of div and shouldn't be a descendant of div
+
+5) Descendant Selector : (div p) This means an paragraph tag under an div tag i.e., it can an direct or also an descendant of div. The only criteria required is, the paragraph tag must be inside an div tag
+
+6) Universal Selector : (*) The styling written inside this selector is applicable for all the elements in the html file
+
+7) Pseudo Selector : This selector is mainly used to define a special state of an element.
+For example, 
+    a) a:link -> (a is an anker tag <a>) An unvisited link will have the properties of this selector
+    b) a:visited -> An visited link will have the properties of this selector
+    c) a:active -> It can be seen when an link is clicked or pressed (Make sure the hover selector is commented before you try this)
+    d) a:hover -> It can be seen when you bring the cursor on a link that contains the properties of this selector
+    e) div:first-child -> It is not that only div can be used here, it could be any element. This means that, if any element has div as its first child, then the properties of this selector will be applied on to that particular div

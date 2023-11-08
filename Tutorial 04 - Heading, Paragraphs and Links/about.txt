@@ -1,0 +1,14 @@
+<!DOCTYPE html> tells us that the current file is a html file
+
+<html lang="en"> -> In this line, the lang is an attribute and its value is "en". This helps us know that the website is in english and helps to parse the site
+
+Heading tag -> <h1></h1> , <h2></h2> , <h3></h3> , <h4></h4> , <h5></h5> , <h6></h6> (As the number increases, the size of the text decreases)
+
+<p></p> -> This is the paragraph tag and used to separate to different sentences from getting continued
+
+To get a dummy paragraph we use the word "lorem" and if we write any number beside lorem like lorem23 then we will recieve 23 words as dummy paragraph. The number can be anything. We use lorem or dummy paragraphs to check how would the site look like when there are text present (usually it is used by freelancers to fill the places where text must be written and later their clients can rewrite the text)
+
+<p style="background-color: red;"> -> Here, style is an attribute for paragraph tag and it is also called as inline css. Through this tag we can color only that one particular paragraph with assigned color in the place of background-color
+
+<a> is called anker tag and it has a mandatory attribute i.e., <a href=""></a>, href is the attribute and using this attribute we can provide links of other sites in our site.
+For example, <a href="https://www.google.com">Google </a> through this line we can see a hyperlink Google in our site and when we click on that Google word we will end up in the google.com website

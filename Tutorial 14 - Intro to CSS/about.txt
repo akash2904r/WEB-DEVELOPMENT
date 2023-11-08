@@ -1,0 +1,4 @@
+CSS - Cascading Style Sheets is used to supplement HTML with some styles
+
+<style> -> Using this tag, we can directly style the html while writing the code itself
+div and span are the selecters containing the properties color and background-color, used in the index file

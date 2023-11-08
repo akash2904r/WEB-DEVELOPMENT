@@ -1,0 +1,16 @@
+Semantic tags are used for SEO (Search Engine Optimization). It also helps us to structure our website. Whenever we use these tags the browser can understand our code in a better way and rank our website
+
+Some of the semantic tags are:
+1) <header> : It is used to represent the top section of a website
+2) <nav> : It signifies the navigation menu of a website
+3) <article> : Indicates a self-contained piece of information, such as blog post or news article
+4) <section> : Represents a thematic grouping of content
+5) <aside> : It is used to represent the content that are tangentially related to the content
+6) <footer> : It is used to represent the bottom section of a website
+7) <figure> and <figcaption> : Used for embedding images, diagrams, or charts along with captions
+8) <main> : Signifies the main content of the website
+9) <time> : Used to represent time related information like dates and times
+
+Semantic tags are used to enhance the SEOs and to improve accessibility and understandability. Semantic tags aren't used for any type of styling
+
+Semantic tags were'nt present from the start. They were added from the html5

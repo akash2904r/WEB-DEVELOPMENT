@@ -1,0 +1,26 @@
+<video> -> This tag is used to add videos in your website. Some of its attributes are:
+1) src : This is an mandatory attribute. We must give the name of the source video to add it in our website
+2) controls : This is also an mandatory attribute. If not written then, the play and pause button won't be visible in the website
+3) autoplay : Using this attribute we can play our video as soon as we open our website, even without pressing the play button
+4) loop : We can loop the video and play it over and over
+5) muted : It is used to mute the video
+6) poster : Basically it is just like an thumbnail for the video
+7) width and heigth : Used to change the dimensions of the video
+
+<audio> -> This tag is used to add audios in your website. Some of its attributes are:
+1) src : This is an mandatory attribute. We must give the name of the source video to add it in our website
+2) controls : This is also an mandatory attribute. If not written then, the play and pause button won't be visible in the website
+3) autoplay : Using this attribute we can play our audio as soon as we open our website, even without pressing the play button
+4) loop : We can loop the audio and play it over and over
+5) muted : It is used to mute the audio defaultly
+6) preload : If we want the browser to fetch the data beforehand, we must use preload attribute. There are 3 values for preload:
+    a) none : This is the default value
+    b) metadata : In this case, the browser will only preload the details about the audio beforehand
+    c) auto : In this case, the browser will preload the entire audio i.e., it will download the audio so that the user can play it whenever required
+
+Media
+<svg> -> It is an format through which we can create high graphics factor images
+
+svg can be saved as an image also, but when we save it as an image and try to add it using <img> tag, we must also add the 'xmlns' attribute together with the svg tag (also called as namespace declaration), so that the svg image is visible in our website or else it won't be visible
+
+<iframe> -> This tag is used to embed another website in your website. It is also used to embed videos from youtube also. Firstly, we must click on the share button and then click on the embed option and then copy the link and paste it in the src 

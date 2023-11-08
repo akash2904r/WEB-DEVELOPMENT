@@ -1,0 +1,40 @@
+<img src="" alt=""> -> This is an image tag, used to display images on your website. src and alt are two attributes of img. As the name suggests src is the name of the source image and alt is any text written inside the quotes, that will be displayed in your website when there is an error or something like source name doesn't exist
+
+img tag has two more important tags height and width. These two are used to adjust height and width and this can be adjusted through css also but, mentioning any one is adviced. We must fill the pixels size for both height and width tags i.e., height="230" -> here 230 is the pixel size
+
+<br> -> This tag is used to break the continuity and go to next line
+
+<table> -> As the name suggests it is used to create an table
+Under table tag we many other tags:
+1) <tr> -> This is an tag used to create different rows
+2) <th> -> This is considered to be as the table heading
+3) <td> -> This is considered to be as the table data
+4) <caption> -> This is used to display an caption of the table just above it
+5) <thead> -> Anything written within this tag is considered as the header part of the table
+6) <tbody> -> Anything written within this tag is considered as the body part of the table
+7) <tfoot> -> Anything written within this tag is considered as the footer part of the table
+
+<th> and <td> tags have an attribute called as colspan and rowspan. Basically we can use attributes to merge rows or columns together. i.e., colspan="2" then that particular table data or heading will occupy two columns. Similarly for rows also
+
+Lists -> There are 3 types of lists:
+1) Unordered List <ul> : The data that is written inside these lists are not ordered, as the name suggests
+2) Ordered List <ol> : The data written inside these lists are in the same order as written
+3) Definition List <dl> : This list has two more tags to explore with,
+    a) <dt> -> This means the definiton term or rather the word that you are trying to define
+    b) <dd> -> This means the definiton data or the meaning of the term that you have written within <dt>
+
+Under unordered and ordered lists to make sure there are two different points we use the tag <li> i.e., list information
+
+Under unordered lists and ordered lists we can find an attribute 'type', using this attribute we can change into different points i.e., 
+
+Unordered Lists has 3 different type:
+a) disc (type="disc") -> Normal bullet points (No need to write this as this is the default)
+b) square (type="square") -> Square shaped bullet points
+c) circle (type="circle") -> Normal bullet points but, hollow and has only the circumfernce darkened
+
+Ordered Lists has 5 different type:
+a) Uppercase Roman Numericals -> (type="I")
+b) Lowercase Roman Numericals -> (type="i")
+c) Lowercase Aphabetical Letters -> (type="a")
+d) Uppercase Aphabetical Letters -> (type="A")
+e) Normal numbers -> (type="1") No need to write this as this is the default

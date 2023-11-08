@@ -1,0 +1,7 @@
+Inline elements just occupy only the amount of width that they require
+
+Block elements on the other hand occupy the whole width
+
+As you can see that block elements does not allow any other elements to occupy the space beside them whereas span being an inline element allows other elements to occpy the space beside it. 
+
+Even though we use the inline element first and then an block element, the block element chooses an new different line of its own since, the inline element has already occupied some space. 

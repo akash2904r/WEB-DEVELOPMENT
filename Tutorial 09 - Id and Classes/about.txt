@@ -1,0 +1,9 @@
+Id and Classes both are attributes of an element
+
+Id is just like an aadhar number, if once given to an element it cannnot be repeated to any other element
+Id can be used for linking purpose also. If we add the id along with the link, then we will reach the exact spot where the id was pointing i.e., to that particular element
+
+One single element can have various classes and one class can be used in various elements also
+When we have mutiple classes for one single element, all the classes are seperated by an space. For example, class="cyan bg-black"  Here, cyan and bg-black are two different classes
+
+In CSS, when we add an '.' before writing anything, it is considered as an class, whereas for an id, we add an '#'
