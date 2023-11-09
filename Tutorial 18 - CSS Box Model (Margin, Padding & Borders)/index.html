@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: black;
+        }
+
+        .box1 {
+            color: cyan;
+            padding: 10px;
+            margin: 35px;
+            border: 5px solid darkmagenta;
+            height: 200px;
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            color: deeppink;
+            padding: 10px;
+            margin: 25px;
+            border: 5px solid darkcyan;
+            height: 200px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        I am a div with classes box and box1
+    </div>
+
+    <div class="box box2">
+        I am another div with classes box and box2
+    </div>
+</body>
+
+</html>

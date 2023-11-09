@@ -1,0 +1,17 @@
+Check out the Box model pic
+
+The total width and height of the element is calculated with the formula:
+
+Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin
+
+Total Height = Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin
+
+
+
+When we give both 'height' and 'box-sizing: border-box' in a selector that simply means the given height is a sum of the content written, padding and border. Whereas, if we had given only the 'height', that implies the height of the content only
+
+
+
+Margin Collapse : It is an concept that is applied when two margins collide with each other. So when this happens, the max of both margins is applied as the margin
+
+The margin which is minimum is just overlapped onto the maximum margin (Take a look at the pic)
