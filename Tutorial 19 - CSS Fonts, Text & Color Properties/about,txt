@@ -1,0 +1,68 @@
+Some of the properties used to style in CSS are : 
+
+
+FONTS & TEXTS :
+
+-> We can even include other fonts through link or import method (Google fonts). But import method is much more convinent and takes up less space compared to link tags. Also we can import many fonts at once itself
+
+-> font-family : Through this property we can alter the font of the elements that match the particular selector. 
+    - Also, we make sure we give more than one font or rather we give a font family because just in case, if we didn't have the first font then the next one will be applied and if the second one is also not present it goes on.
+
+-> font-style : Through this property we can alter the font to look like a italic style or normal or oblique or we can even inherit the style of the parent element
+
+-> font-weight : Through this property we can alter the boldness of the letters
+
+-> text-decoration : Through this property we can underline words or we can even use overline or line-through and many other things
+
+-> text-decoration-color : Through this property we can change the color of the decorations used
+
+-> text-decoration-style : Through this property we can change the style of the decoration i.e., if we had used an underline then we can make it look like a dotted line, wavy line, double line, or it can even inherit the same style as of its parent
+
+-> text-decoration-thickness : Through this property we can change the thickness of the decoration used
+
+-> text-indent : Through this property we can increase or decrease the distance of text from the left corner of the site
+
+-> line-height : Through this property we can alter the height of the line. Visit the website to check out how it actually works
+
+-> letter-spacing : Through this property we can increase or decrease the distance between each letter in a word
+
+-> word-spacing : Similar to letter-spacing, through this property we can increase or decrease the distance between words
+
+-> text-transform : Through this property we can capitalize words or convert them into lowercase or uppercase and more
+
+-> text-align : Through this property we can align our text as we wish i.e., we can get our text in the center of the website or left or right. Bascially we use this property to justify text (text-indent can also be used for same)
+
+-> text-overflow : Through this property we can control how the text should look like when it overflows from its border. 
+    - By using ellipsis and overflow property as hidden we can make texts which are overflowing look like => For example, the word lorem is overflowing, it might look like lor...
+    - By using clip and overflow property as hidden we can make texts look like =>
+    For example, the word lorem is overflowing, it might look like lor
+    The other part will be hidden and can't be seen
+
+-> word-break : Through this property also we can control the overflow of texts. It basically breaks the words and sends the second half of the broken word to the next line to avoid overflow of texts
+
+
+
+
+
+COLORS :
+
+Check out this site to know more about CSS Colors ---> https://codepen.io/web-dot-dev/pen/ZELGraM 
+
+Colors can be represented in following ways in CSS :
+
+-> Color Keywords : It is the colors that we usually use.
+For example, red, blue, green etc.
+
+-> Hex Color Code : It is a code given to represent a particular color 
+For example, #0bee0b 
+
+-> RGB : It is a color that occurs when we mix certain amount of red, green and blue together. In this method, we have give the values of red, green and blue to get the color
+
+-> RGBA : It is same as RGB. But, we have another deciding factor and that is alpha. Alpha can vary from 0 to 1 and by default alpha is 1. Alpha is nothing but, the opacity of an element. The opacity level describes the transparency level, where 1 is not transparent at all, 0.5 is 50% transparent and 0 is completely transparent. 
+
+-> HSL (Hue, Saturation, Lightness) :
+    - Hue (H) represents the type of color and it is measured in degrees
+    - Saturation (S) represents the intensity and purity of the color and it is measured in percentage
+    - Lightness (L) determines how light or dark the color should be and it is measured in percentage
+
+-> HSLA : It is same as HSL and it also has an extra deciding factor i.e., alpha. (Alpha's explanation is same as in RGBA)
