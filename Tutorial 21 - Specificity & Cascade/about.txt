@@ -1,0 +1,28 @@
+Specificity : 
+
+There is a Cascade algorithm that solves conflicts when mutiple CSS rules applies to an HTML element
+
+Cascade Alogrithm has 4 distinct stages :
+1) Position and order of apperance - Let's assume all the selectors used are of one type. Then, the selector that has been written at the bottom most is considered. It is just like an variable getting overwritten
+2) Specificity of the selector (Given below)
+3) Origin : Whether the CSS is from browser extension (User Agent Style Sheet) or your authored CSS
+4) Importance : Whenever we use the !important rule type then it's considered to a higher weightage or specificity
+
+Highest specificity of selectors in order, 
+Inline CSS - ID Selector - Class or Attribute Selector - Element Selector - Universal Selector
+
+Specificity Calculation :
+To calculate the specificity, let us assign some values to each selector :
+    - Universal Selector : 0
+    - Element Selector and Pseudo-Elements : 1
+    - Class Selector, Attribute Selector and Pseudo-Classes : 10
+    - ID Selector : 100
+    - Inline CSS : 1000
+    - !important (if used) : 10000
+
+Basically, the selector with highest specificity is considered
+
+Attribute Selector : It is nothing but an selector made out of the attribute and its value. 
+    For example, name is an attribute and it's value is h1 . So using this data, we can create an attribute selector. Since the attribute selector requires both key-value pair we enclose them together in a square bracket [] i.e., [name=h1]
+
+By using !important, we can even overwrite an Inline CSS also

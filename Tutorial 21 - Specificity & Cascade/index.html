@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Specificity and Cascade</title>
+
+    <style>
+        /* The specificity of this selector is 1 */
+        h1 {
+            color: chocolate;
+        }
+
+        /* The specificity of thsi selector is 10 */
+        .yellow {
+            color: yellow;
+        }
+
+        /* The specificity of thsi selector is 10 + 10000 */
+        /* .red {
+            color: red !important;
+        } */
+
+        /* The specificity of thsi selector is 10 */
+        .purple {
+            color: purple;
+        }
+
+        /* The specificity of thsi selector is 1 + 10 */
+        h1.yellow {
+            color: maroon;
+        }
+
+        /* This is an example of attribute selector. The specificity of thsi selector is 10 */
+        [name=h1] {
+            color: greenyellow;
+        }
+
+        /* The specificity of thsi selector is 1 + 10 + 10 + 10 + 10 */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+        /* In the above selector, a is an element and harryclass and rohan are classes and href is an attribute and finally hover is an pseudo selector */
+    </style>
+</head>
+
+<body>
+    <!-- The specificity of inline css is 1000 -->
+    <h1 style="color: blue;" class="yellow red purple" name="h1">CSS Specificity</h1>
+
+    <h1 class="yellow red purple" name="h1">I am another h1 without inline CSS but, I do have all other classes and attributes as the previous h1</h1>
+</body>
+
+</html>
