@@ -1,0 +1,35 @@
+More about units -> https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units
+
+- px : An pixel is about 196th of an inch
+    One disadvantage of using pixel is that the height and width (if given) becomes a fixed value and if we try to switch devices then the height and width might not workout properly for the new device as that of the one for which we have actually given height and width for 
+
+- vw : It is nothing but the viewport width. If we give the value as 100vw that means the 100% of the viewport width and if it is given as 80vw, then it means the 80% of the viewport width (i.e., the device's width)
+
+    If we give margin's value as auto, then we can get our text in the middle of our site as the margin would be given equally on both the sides. Also, this is only applicable if the element is an block element and not an inline element
+
+    If we use 2 values for margin like 'margin: 23px auto;', then the first value represents the top-bottom margins and the second value represents the left-right margins
+
+- vh : It is similar to vw, but it is the viewport height
+
+    One advantage of using vw and vh is that, these two units are responsive units. So, unlike pixel if we switch devices also the height and width remains intact
+
+- em : If the font-size of an element is given as 2em then it means that, the font-size of this particular element is 2 times of it's parent element's font-size
+
+    If the font-size of the parent is not given, then the default value of the font-size would be 16px. So the element which has 2em as it's font-size would be of the font-size 32px
+
+- rem : It is similar to em but, if the font-size of an element is given as 2rem then it means that, the font-size of this particular element is 2 times of the root element's font-size
+
+    <html> is the root element in HTML (deafult value is 16px)
+
+- vmin : It is also similar to that of vw and vh. But, here when we use vmin that just means the min(vw, vh)
+
+    In case, we are using a mobile phone then our minimun value (vmin) would be vw i.e., the width of our mobile phone. But in case of a desktop or an laptop, the minimum value (vmin) be vh i.e., the height of our desktop or laptop.
+    Why? Try visualizing both in front of you 
+
+- vmax : It is just the opposite of the vmin. Here, the vmax is nothing but, max(vw, vh)
+
+    In case of our mobile phone the vmax would be vh and the vmax of a desktop or laptop would be vw
+
+We can use 'min-height' and 'min-width' to give an minimum value for height and width. This might come in handy when you want to keep the footer part of the website at the end. So we may use the min-height such that the footer is at the end of the website. But the maximum height increases as we add content
+
+- % : Percentage is also an unit. If font-size of an element is 50%, then it means the font-size of that partiular element is 50% of it's parent element's font-size 

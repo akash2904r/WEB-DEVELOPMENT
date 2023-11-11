@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing Units</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1366px; */
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aquamarine;
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1366px; */
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            font-size: 18px;
+            margin: auto;
+            background-color: aquamarine;
+        }
+
+        .container > div {
+            font-size: 2em;
+            /* font-size: 2rem; */
+            border: 2px solid red;
+            width: 50%;
+        }
+
+        .container > div > div {
+            border: 2px solid blue;
+            width: 50%;
+        }
+
+        .container2 {
+            box-sizing: border-box;
+            border: 2px solid black;
+            margin: 23px auto;
+            color: red;
+            font-size: 22px;
+            width: 80vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This is a div
+    </div>
+    <br>
+    <div class="container">
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit debitis consectetur minus animi quidem neque eos, exercitationem saepe. Doloribus itaque iste nihil rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum excepturi architecto iste.
+
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sunt voluptatibus a, enim nulla id officiis ad praesentium fuga, distinctio consequuntur eveniet ipsam deleniti. Minima vitae voluptates sint, consequatur fugit nisi molestias quod. Quasi.
+        </div>
+        </div>
+        <!-- Expand this to understand how min-height works -> lorem999  -->
+    </div>
+
+    <div class="container2">
+        This is the footer of my website
+    </div>
+</body>
+
+</html>
