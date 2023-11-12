@@ -1,0 +1,23 @@
+- box-shadow : h-offset v-offset blur spread color inset;
+
+    * h-offset and v-offset : Determines the shadow's horizontal and vertical position i.e., basically how long do you require the shadow to be
+    * blur : Larger the value, blurier the shadow
+    * spread : Expands or shrinks the size of shadow
+    * color : Defines the shadow color
+    * inset : Makes the shadow inner i.e., how in would you like the shadow to be
+
+
+- text-shadow : h-offset v-offset blur color;
+
+    * Same as box-shadow
+
+
+- outline : width style color;
+
+Outline and border are very much similar and some of the difference between them are:
+1) Position : Outlines don't take space, they're drawn around the element, outside the border (They don't belong in the box-model concept)
+2) Offset : Using outline-offset property we can set the space between an outline and the border of an element
+3) Width : Outlines have a uniform width, whereas borders can have varying widths on different sides
+4) Rounded Corners : Borders can have rounded corners using the property border-radius, while outline generally cannot. If they do have a rounded corner then it must have been inherited from the border of that particular element
+
+Check out the website or code to understand more about these, mainly outline

@@ -1,0 +1,15 @@
+More about display properties -> https://developer.mozilla.org/en-US/docs/Web/CSS/display
+
+display is an property that can be used in an selector to convert inline elements into block or block into inline and more
+
+We know that, <div> is an block element, but using the class selector (.box) we have made it's display value as inline. This way, that particular div with the class box will become inline
+
+Similarly, we can even convert a span into an block element also
+
+In some cases, when we require to add padding and margin to some elements the padding and margin does not apply to the top portion. So, in these cases we must use the display value as 'inline-block'. This way, the padding and margin will be applied equally on all four sides and we can even change the width when we use inline-block as the value. But, if the value is inline then the width cannot be changed (Check out the website to see the difference)
+
+If we use 'none' as the value for the display property then the element that was being displayed would no more be displayed or more like deleted (not exactly, but similarly) (Uncomment the display property in .box2 selector and check the website to understand in a better way)
+
+We have an another property called visibility and when we set it's value as 'hidden' then the space that the element occupied would remain intact by the element's text and other things won't be visible (Uncomment the visibility property in .box2 selector and check the website to understand in a better way. Also make sure the display property is commented)
+
+display property also has some important values such as 'flex' and 'grid'. We will be learning about these in the upcoming tutorials

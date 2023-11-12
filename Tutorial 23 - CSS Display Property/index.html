@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid red;
+            display: inline-block;
+            width: 344px;
+            padding: 45px;
+            margin: 34px;
+        }
+
+        .box1 {
+            color: cyan;
+            background-color: black;
+            display: block;
+        }
+
+        .inline {
+            border: 2px solid red;
+            display: inline;
+            width: 344px;
+            padding: 45px;
+            margin: 34px;
+        }
+
+        .box2 {
+            border: 2px solid red;
+            /* display: none; */
+            /* visibility: hidden; */
+            width: 344px;
+            padding: 45px;
+            margin: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">I am a box</div>
+    <div class="box">I am another box</div>
+    <div class="inline">I am an inline div</div>
+    <div class="box2">I am an invisible div</div>
+    
+    <span class="box1">I am an span</span>
+</body>
+
+</html>

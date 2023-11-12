@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outlines</title>
+
+    <style>
+        .box {
+            border: 2px solid red;
+            padding: 34px;
+            box-shadow: 5px 15px 16px 0px #d33118;
+        }
+
+        .textshadow {
+            text-shadow: 15px 11px 3px #b851cb;
+        }
+
+        .outline {
+            outline: 2px solid magenta;
+            border: 2px solid black;
+            border-radius: 8px;
+            background-color: yellow;
+            outline-offset: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">I am a box</div>
+
+    <br><br><br>
+
+    <p class="textshadow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit deleniti illum laudantium, sit porro aperiam,
+        voluptate, consequuntur quisquam dolore perspiciatis quis. Quia, odio?
+    </p>
+
+    <br><br><br>
+
+    <p class="outline">
+        I am an example of outline <br>
+        The yellow colored part is till where the border exists <br>
+        The magneta colored line beyond the black line is the outline. It was sent away from the border of the element using the property 'outline-offset' <br>
+        The rounded edge of the border was given using the property 'border-radius' <br>
+        Usually it is not possible for the outline to have a rounded corner but, as the outline has inherited it from border, it also shows the same property
+    </p>
+</body>
+
+</html>
