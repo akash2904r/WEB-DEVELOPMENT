@@ -1,0 +1,13 @@
+* overflow is an property used to CSS to handle the overflow of text from the border
+
+We have many values for overflow property and some are :
+    - scroll : When we use this value for overflow property, an scroll bar will appear but even though the text isn't overflowing from the border we will be able to see an scroll bar for both top-down and left-right 
+    - auto : When we use this value, the scroll bar appears when there is an overflow of text from the border and if there isn't any overflow, the text reamins the same without any scroll bar (To test this change the width and height)
+    - hidden : Using this value, we can just hide the content or text that is overflowing
+    - clip : This is similar to hidden value, but if we use this value then we will not be able to scroll programmatically also
+
+    overflow can be handled separately also i.e., overflow-x and overflow-y. We can give two different values for both x and y at the same time. Using the syntax overflow: value_for_x value_for_y; we can give both x and y values using one property itself instead of using overflow-x and overflow-y as seperate properties (i.e., overflow-x: hidden; overflow-y: auto; == overflow: hidden auto;)
+
+* white-space is another property used to bring all the text or content inside a box in just one line. i.e., if we use a 'white-space: nowrap;' then all the text will be seen in one line itself
+
+* text-overflow is another property using which we control the overflow of texts. If we give the value of text-overflow as ellipsis then the text that should have been displayed after the overflow would be shown like content... (... is the overflowing content) (Check out the website to understand in a better way)

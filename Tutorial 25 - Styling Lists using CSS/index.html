@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists using CSS</title>
+
+    <style>
+        nav > ul li {
+            list-style: kannada;
+            background-color: yellow;
+            list-style-position: inside;
+            border: 2px solid red;
+        }
+
+        .second {
+            list-style-image: url("https://media.tenor.com/jKf47se2ud8AAAAd/zoro-zoro-one-piece.gif");
+        }
+
+        .emoji {
+            list-style-type: "🔥";
+        }
+
+        ol {
+            list-style: none;
+            display: flex;
+        }
+
+        ol li {
+            color: cyan;
+            background-color: black;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <br>
+        <ul>
+            <li class="second">Example of using a gif in place of marker</li>
+            <br><br>
+            <li class="emoji">Example of using emoji in place of marker</li>
+        </ul>
+    </nav>
+
+    <ol>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ol>
+</body>
+
+</html>

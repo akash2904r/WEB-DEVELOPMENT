@@ -1,0 +1,20 @@
+Whenever we create an list item i.e., <li> there are two things that comes with creation of list items. They are :
+1) marker : The bullet point or number or alphabets
+2) content : The text written inside the list item
+
+The <li> also has a display property and it's default value is 'list-item' and when we change it's value to 'block' the marker of that particular list item can be removed
+
+- list-style : Using this property, we can change what type of bullet points should be displayed. In case, we use 'list-style: none;' then the marker won't appear and if the value is 'kannada' the numbers that appear would be kannadic numbers
+
+If we try to color the background of an list item, then only the part containing text would be colored, while the marker won't be colored. This is because the marker is initially outside the list item. To overcome this problem we use the below property
+
+- list-style-position : We can position the marker using this property. The default value of the marker would be outside but when the value is changed to 'inside' the marker is also considered as a part of the list item and all the border and background color will also be applied to the marker
+
+- list-style-image : Using this property, we can put images and gifs in place of marker
+
+- list-style-type : Using this property, we can use emojis in place of marker
+
+The original syntax of list-style property is 'list-style: type_of_bullet_point position image;' . So using this property we can give values of 3 properties discussed above i.e., list-style, list-style-position and list-style-image (in same order). 
+    If we use list-style then we can't use list-style-image. Because if we use both the list-style will be overwritten by list-style-image. So we must use either 'list-style and list-style-position' (or) 'list-style-position and list-style-image'
+
+- display : Using display property in any type of list with the value 'flex' will make all the list items look in horizontal manner (Check out the website, 'ol' is the example)

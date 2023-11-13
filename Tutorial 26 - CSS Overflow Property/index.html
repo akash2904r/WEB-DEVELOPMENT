@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Property</title>
+
+    <style>
+        .box {
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid red;
+            overflow: scroll;
+        }
+
+        .box1 {
+            /* width: 50vw;
+            height: 20vw; */
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid yellow;
+            overflow: auto;
+        }
+
+        .box2 {
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid green;
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        .box3 {
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid blue;
+            overflow: auto;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .box4 {
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid blueviolet;
+            /* overflow-x: hidden;
+            overflow-y: auto; */
+            overflow: hidden auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        I am a box and this is an example to understand the 'overflow' property with value 'scroll' and next comes lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid porro iure minus. Sint doloremque magni, quidem ullam optio molestiae tempora consequuntur quam, nihil minima repellat natus eligendi. Dolorum distinctio inventore officia, atque temporibus neque.
+    </div>
+    <br>
+    <div class="box1">
+        I am a box1 and this is an example to understand the 'overflow' property with value 'auto' and next comes lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid porro iure minus. Sint doloremque magni, quidem ullam optio molestiae tempora consequuntur quam, nihil minima repellat natus eligendi. Dolorum distinctio inventore officia, atque temporibus neque.
+    </div>
+    <br>
+    <div class="box2">
+        I am a box2 and this is an example to understand the 'white-space' property and box3 is to understand 'text-overflow' property with the value 'ellipsis' and next comes lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid porro iure minus. Sint doloremque magni, quidem ullam optio molestiae tempora consequuntur quam, nihil minima repellat natus eligendi. Dolorum distinctio inventore officia, atque temporibus neque.
+    </div>
+    <br>
+    <div class="box3">
+        I am a box3 and this is an example to understand the 'text-overflow' property with the value 'ellipsis' and next comes lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid porro iure minus. Sint doloremque magni, quidem ullam optio molestiae tempora consequuntur quam, nihil minima repellat natus eligendi. Dolorum distinctio inventore officia, atque temporibus neque.
+    </div>
+    <br>
+    <div class="box4">
+        I am a box4 and this is an example to understand the 'overflow-x' and 'overflow-y' properties and next comes lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid porro iure minus. Sint doloremque magni, quidem ullam optio molestiae tempora consequuntur quam, nihil minima repellat natus eligendi. Dolorum distinctio inventore officia, atque temporibus neque.
+    </div>
+</body>
+
+</html>
