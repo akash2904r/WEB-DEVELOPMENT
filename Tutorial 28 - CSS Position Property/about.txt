@@ -1,0 +1,25 @@
+position is a property in CSS and it's default value is 'static'. When the value is static we cannot use some other properties such as 'top', 'bottom', 'left' or 'right'
+
+Some of the other values that can be used in place of static are :
+
+* relative : Using this value we can move an particular box or an element from it's position using other properties such as 'left', 'right', 'top' or 'bottom' and when the element or box is moved it does not affect other elements or boxes
+    Also we can use only two properties at a same time i.e., either 'top' and ('left' or 'right') else 'bottom' and ('left' or 'right')
+    Even if we try using both 'left' and 'right' together the one written at the bottom most would replace or rewrite the one written before. Similarly for 'top' and 'bottom'
+
+    - z-index : When we move an element1 it might overlap on an element2 i.e., the content from element2 might not be seen because element1 would have be moved above it. For making element2 to overlap element1 rather than 1 overlapping 2, we use another property called 'z-index'. The value for this property can be anything other than 0. Even if we set it as 1 the element2 will come above the element1. In order to use this property the position must not be 'static' (Check the website to understand in a better way)
+
+
+* absolute : When we use this value, the element on which this property was applied tries to find the nearest positioned ancestor. Positioned ancestor means the element whose position property's value is not 'static' 
+    (Since the nearest positioned element is <html>, the element positions itself relatively to <html>. If it's parent was positioned then it would have positioned itself relatively to it's parent itself)
+
+
+* fixed : When we use this value, we can position an element in a particular place using the properties mentioned above and the element wouldn't move from it's positioned even if we tried to scroll down (i.e., just like ads in some random websites)
+
+
+* sticky : The element with this value as it's position property acts like an hybrid between static and fixed. Unless and until we try to scroll over this particular element containing this property it acts as an static element but, once we scrolled over this element it acts as an fixed element (It works better with top property). This can be used for creating navbars
+
+
+There are 3 other properties which make an element appear as positioned even though the position property is not applied for that particular element. They are :
+1) transform
+2) filter
+3) perspective
