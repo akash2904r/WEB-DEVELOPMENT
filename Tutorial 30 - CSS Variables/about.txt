@@ -1,0 +1,16 @@
+Syntax of declaring variables is --var_name (i.e., --color: crimson;)
+
+There are 2 types of variables in CSS :
+1) Global Variable
+2) Local Variable 
+
+Global Variables : The variables which are declared inside the root scope are considered as global variables
+
+Local Variables : The variables which are declared inside any other selector are considered as local variables
+
+One of the biggest advantage of using variables is, just in case we are using an color for many elements and we want to change all at once. Therefore, using variables we can change them in no time by just changing the value of the global variable 
+
+Just in case, if the variable is not found we can give a fall-back value i.e., color: var(--color), red; 
+    Here the fall-back value is red. So if the variable wasn't found then red color will be applied for that particular element that you are targeting
+
+Variables aren't used to hold only the colors but they can also be used to hold other values such as size, length, opacity, urls, strings, numbers etc.

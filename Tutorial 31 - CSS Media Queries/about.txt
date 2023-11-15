@@ -1,0 +1,20 @@
+Media Queries are used to make our website responsive
+
+Basic syntax of a media query is :
+    @media not/only media_type and (expressions) {
+        CSS-Code;
+    }
+
+Some of the media types are screen, all, print, speech etc
+
+
+
+* flex-direction : This property is used to change the direction of the elements that have the display property as flex i.e., flex-direction: column; So all the elements would be arranged in a column when we write this CSS code  
+
+
+
+Orientation has 2 main values :
+
+- portrait : When the height of the viewport is maximum, then it is considered as portrait 
+
+- landscape : When the width of the viewport is maximum, then it is considered as landscape
