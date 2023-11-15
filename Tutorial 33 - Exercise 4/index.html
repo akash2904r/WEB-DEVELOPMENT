@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+
+    <style>
+        :root {
+            --home: black;
+            --about: indigo;
+            --portfolio: blue;
+            --contact: green;
+            --more: coral;
+            --color: honeydew;
+        }
+
+        .nav ul {
+            color: honeydew;
+            display: flex;
+        }
+
+        .nav li {
+            padding: 0 65px 0;;
+            list-style: none;
+            border: 1px solid black;
+            border-radius: 25px;
+        }
+
+        .home {
+            position: relative;
+            background-color: var(--home);
+            color: var(--color);
+        }
+
+        .about {
+            position: relative;
+            right: 20px;
+            background-color: var(--about);
+            color: var(--color);
+        }
+
+        .portfolio {
+            position: relative;
+            right: 40px;
+            background-color: var(--portfolio);
+            color: var(--color);
+        }
+
+        .contact {
+            position: relative;
+            right: 60px;
+            background-color: var(--contact);
+            color: var(--color);
+        }
+
+        .more {
+            position: relative;
+            right: 80px;
+            background-color: var(--more);
+            color: var(--color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a multi-colored nav bar using global variables to color -->
+
+    <div class="nav">
+        <ul>
+            <li class="home">Home</li>
+            <li class="about">About</li>
+            <li class="portfolio">Portfolio</li>
+            <li class="contact">Contact</li>
+            <li class="more">More</li>
+        </ul>
+    </div>
+</body>
+
+</html>
