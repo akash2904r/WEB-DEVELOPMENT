@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+
+    <style>
+        /* .box:first-child {
+            background-color: red;
+        } */
+
+        /* .boxes:first-line {
+            background-color: black;
+            color: cyan;
+        } */
+
+        /* .boxes * {
+            color: red;
+        } */
+
+        /* Grouping of selectors */
+        /* p, a, div, .box {
+            background-color: black;
+            color: cyan;
+        } */
+
+        /* .box:nth-child(odd) {
+            background-color: red;
+        } */
+
+        /* .box:nth-last-child(1) {
+            background-color: black;
+            color: cyan;
+        } */
+
+        .boxes::before {
+            content: "This is an example of pseudo element, before";
+            color: red;
+        }
+
+        .boxes::after {
+            content: "This is an example of pseudo element, after";
+            color: cornflowerblue;
+        }
+
+        ::selection {
+            background-color: black;
+            color: rgb(124, 80, 124);
+        }
+
+        .box::first-letter {
+            color: peru;
+            font-size: 45px;
+        }
+
+        input::placeholder {
+            background-color: rgb(37, 37, 37);
+            color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="box">I am the first box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+
+    <a href="https://www.google.com">Google</a>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+We can even target the first line or first child of an element using pseudo selectors as shown in the code
+
+When we target the first line of an element, there is no particular word count for which the styling will apply. Therefore, the first line pseudo selector is an responsive styling 
+
+When we use the unviversal selector in this way (.boxes *) that means all the elements present inside the element containing class as boxes. Therefore, all the elements inside the .boxes classed element would be styled
+
+We can even group selectors using commas i.e., 
+    p, a, .box, [name="example"] {
+        /* CSS Code */
+    }
+
+For the pseudo selector 'nth-child(even)', we can give the values as even or odd also. Therefore, all the even or odd childs will be applied with the styling
+
+Elements can also be dynamically inserted through CSS using the pseudo elements (it is not pseudo selector instead it is pseudo elements), 'before' and 'after'. If we use 'before' then the content would be inserted before the main content of that particular element. Whereas, if we use 'after' then the content would be inserted after the main content of that element
+
+    Whenever we use these pseudo elements, an before or after or both elements are inserted before or after the main content (Try inspecting it in the site)
+
+
+selection is another selector that can style the selected elements by the user. This particular kind of selector cannot select or apply the style to the dynamically inserted elements
+
+    Not only by this selector but basically we just cannot select an dynamically inserted element
+
+
+We can even target and style the text written in an placeholder of an input tag also

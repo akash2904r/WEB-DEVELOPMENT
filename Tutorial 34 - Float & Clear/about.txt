@@ -1,0 +1,8 @@
+float : It is an property that let's other elements occupy it's space on either left or right (i.e., it kind of converts an block element to an inline element)
+    For example, if an image is used in our website and we want to keep the image on the left or right side of our site and on the other side we want to add text about it. Then we can use this property
+    To keep the image on the left side -> float: left; (Similarly for right) 
+
+When we use the display property with the value as 'flow-root' and if any image is overflowing from the border it will be taken care of
+
+clear : It is an property that does not let other elements occupy it's space on either left or right or both 
+    i.e., if the image is floating on left side and we give the value for clear as either 'left' or 'both' then the content in this particular element would not let the image float on it's left and goes down
