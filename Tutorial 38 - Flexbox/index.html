@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+
+    <style>
+        .container {
+            height: 80vh;
+            border: 2px solid red;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+            /* align-content: center; */
+            /* flex-flow: row wrap; */
+            /* gap: 30px; */
+            /* row-gap: 40px;
+            column-gap: 10px; */
+            gap: 40px 10px;
+        }
+
+        .item {
+            height: 52px;
+            width: 52px;
+            font-size: 25px;
+            color: cyan;
+            background-color: black;
+            border: 3px solid blue;
+            /* margin: 4px; */
+            /* flex-grow: 1; */
+        }
+
+        .order1 {
+            order: 1;
+            align-self: flex-start;
+        }
+
+        .order2 {
+            order: 2;
+        }
+
+        .order3 {
+            order: 3;
+        }
+
+        .element {
+            /* flex-grow: 2; */
+            flex-shrink: 2;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="item element">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item order1">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <!-- <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item order1">66</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div> -->
+        </div>
+    </main>
+</body>
+
+</html>

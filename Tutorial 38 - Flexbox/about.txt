@@ -1,0 +1,85 @@
+flex is an property used mainly for aligning content of an website
+
+flex is not applied directly on the content but instead, it is applied on the container that contain's the content
+
+Some of the properties that come with flex :
+
+
+Properties that are applied on container :
+
+* justify-content : There are various values for this property and some of them are (This property aligns the content with reference to column):
+    - center : Content get's to the center of the container
+    - flex-end : If we use this value, all the content will get to the end of the flex
+    - flex-start : Similar to previous value, content will get to the start of the flex
+    - left : Content will get to the left of the container
+    - right : Content will get to the right of the container
+    - space-around : There will be equal space between the content such that the content completely fill's the container (there is space even at the start and end such that, left_space + right_space = space_between_content)
+    - space-between : This value is also similar to previous value but the only difference is there is no space at the start and end. The content starts from the border of the container and ends at the other end of the container's border
+    - space-evenly : This value is very much similar to space-around, because all the spaces between the content and the spaces at the start and end are equal
+
+
+We don't have any property such as 'justify-items'
+    
+
+* align-items : This property is used when we have only one line to align in the container. This property also various values and some of the are (This property aligns the content with reference to row):
+    - center : Content get's to the center of the container 
+    - end : Content get's to the end of the container
+    - start : Content get's to the start of the container
+    - flex-start : Content get's to the start of the flex
+    - flex-end : Content get's to the end of the flex
+
+
+* align-content : This property is used when we have multiple lines to align in the container. Rest all are similar to 'align-items'
+
+
+When used the property display as flex, the default direction of the items in an container are from left-right i.e., row
+    This can be changed using the property, 'flex-direction'
+
+* flex-direction : Some of the values of this property :
+    - row : The content will be aligned from left-right
+    - column : The content will be aligned from top-bottom
+    - row-reverse : The content will be aligned from right-left i.e., item1 will be at the right most corner and itemN at the left most
+    - column-reverse : The content will be aligned from bottom-top i.e., item1 will the bottom most and itemN will be the first most in container
+
+
+If the flex-direction is row then the 'main axis' would be row and the 'cross axis' would be column, vice versa
+    For example, when we use 'justify-content' it basically checks the 'main axis' and with reference to that axis it brings the content to center or whatever the value that is been provided
+
+
+If there are a lot of content in the container then it might overflow from the container and get hidden
+    To counter this we can use the property, 'flex-wrap'
+
+
+* flex-wrap : We have 3 values for this property :
+    - no-wrap : It is the default value
+    - wrap : If we use this value then the overflowing content (assuming main axis as row) from the container will get to the next row (or below) the content which has filled the row above
+    - wrap-reverse : The content will be reversed and wrapped (similar to the reverse explained in flex-direction)
+
+
+* flex-flow : This is property that combines both 'flex-direction' and 'flex-wrap' properties i.e., we have to give 2 values for this property, flex-flow : flex-direction flex-wrap; 
+    This way we don't have to write two different properties
+
+
+* gap : It is an property that is used to define the space between the items i.e., gap: 30px; 
+    - If the gap's value is defined as 30px then the gaps between the items with reference to row as well as column would be 30px
+    - Instead if the gap value is (gap: 30px 5px;) then the row-gap would be 30px and the column-gap would be 5px
+    - Or else we can use seperate properties for row and column also i.e., 'row-gap' and 'column-gap'
+
+
+
+Properties that are applied on items :
+
+* order : This property can be used to change the order of the items i.e., lower the order sooner the item would appear
+    Default value of order is 0
+
+
+* flex-grow : The default value of flex-grow is 0 and if we have only one row then using this property we can fill the whole width of the container by giving the value of this property as 1
+    In case we give the value as 2 for any one particular element then that particular element would occupy space 2 times that of an element with flex-grow as 0
+
+
+* flex-shrink : It is the ability of an element to shrink if necessary (it comes in handy for responsive sites)
+    - If an element has the value as 2 for this particular property then that means, that particular element can shrink 2 times that of an element with flex-shrink as 0
+    - Make sure to use this property when the wrap property is disabled and remove the numbers from the items to clearly understand
+
+
+* align-self : This property is used to align an single element and the values are similar to that of 'align-content' and 'align-items'
