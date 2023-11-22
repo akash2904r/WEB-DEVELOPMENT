@@ -1,0 +1,92 @@
+grid is an property used mainly for aligning content of an website
+
+- The space between 2 grid lines are called as an grid track
+
+- The space between 2 horizontal and 2 vertical grid lines are called as grid area
+
+While using grid we can manually declare how many rows and columns should exist and to do that we use the properties 'grid-template-columns' and 'grid-template-rows'
+
+* grid-template-columns : This property is used to manually declare the number and size of columns to be present in the grid
+    - Initially we will have only 1 column
+    - If the value is (120px 100px 120px;) then this means that there are 3 columns and the size of column1 is 120px, column2 is 100px and column3 is 120px
+
+
+* grid-template-rows : This property is used to manually declare the size of rows that are present in the grid
+    - Let's assume there are 3 rows in the grid and if the value is given as (100px 100px 100px;) then the size of each row would be 100px 
+    - If we give the value as (100px 100px;) then for the first 2 rows the size would be 100px and for the third row the size would be same as that of it's element's height
+
+
+We can even overlap 2 elements in 1 grid cell also and to achieve this we require two properties, 'grid-row' and 'grid-column'
+
+
+* grid-row : We can choose an particular element and through this property we can define the start and end of row (i.e., the grid line) for that particular element
+    - Syntax : grid-row: start_of_row / end_of_row;
+    - When we say (start_of_row and end_of_row) i.e., let's assume we have a 3*3 grid and we have to assign an grid cell for an element. So this grid would have grid lines 1,2,3,4 for both rows and columns and if we want to assign the first cell (arr[0][0]) then the start and end would be 1 and 2 respectively (since, grid lines are named from 1 to n)
+
+
+* grid-row-start & grid-row-end: When we combine these two properties we get 'grid-row' i.e., (grid-row: 1/2;) is equivalent to (grid-row-start: 1; grid-row-end: 2;)
+
+
+* grid-column : We can choose an particular element and through this property we can define the start and end of column (i.e., the grid line) for that particular element
+    - Syntax : grid-column: start_of_column / end_of_column;
+    - Let's assume we have a 3*3 grid and we have to assign an grid cell for an element. So this grid would have grid lines 1,2,3,4 for both rows and columns and if we want to assign the first cell (arr[0][0]) then the start and end would be 1 and 2 respectively (since, grid lines are named from 1 to n)
+
+
+* grid-column-start & grid-column-end: When we combine these two properties we get 'grid-column' i.e., (grid-column: 1/2;) is equivalent to (grid-column-start: 1; grid-column-end: 2;)
+
+
+This way, if we give the same 'grid-row' and 'grid-column' values for 2 or more elements they would get overlapped on that particular grid cell
+    - We can even use space worth of 2 or more grid cells also for 1 single element
+
+
+We can even rename the grid lines from 1-n to whatever we require like first, second, third etc., and this can be done while we declare the number of columns (or) rows i.e., grid-template-columns (or) grid-template-rows
+    - Let's assume we want 2 columns and we want the grid lines to be named something other than 1,2,3. So, this is how we can do it :
+        grid-template-columns: [onnu] 120px [rendu] 100px [moonu];
+    - When we define the columns in this way then the grid line 1 would be renamed as onnu, grid line 2 as rendu and grid line 3 as moonu
+
+
+* grid-template-areas : It is an property used to name an particular section or area of a grid
+    - Syntax : grid-template-areas: "nav nav nav" "side article article" "foot foot foot";
+    - Looking at the synatx we can understand that we have 3 columns in which the 1st row is considered as nav, the 2nd row's first cell is considered as side and it's second and third cells are considered as article and finally, the 3rd row is considered as foot
+    - Using this property we can place elements in any manner that we require for them to be placed
+
+
+* grid-area : This is an property that is used to assign the areas that were named using the 'grid-template-areas' property to particular elements
+    - Syntax : grid-area: nav;
+    - From the syntax we can understand that nav is an area that is been assigned to a particular element that consists of the property 'grid-area' with it's value as 'nav'
+    - If we give the same area for 2 or more elements then they will just overlap on one another
+
+
+We have an sizing unit known as 'fr' and let's assume we use it in this way
+    - grid-template-columns: 1fr 1fr 1fr;
+    - Let's assume the width of the container is 90px, then the 1st column takes 30px, 2nd column takes 30px and 3rd column also takes 30px. Since we have used 3 fr's and each one of as 1fr that means 1fr = 1/3rd part of 90px, which is 30px
+    - Instead of 1fr if we had used 2fr then it would mean (2*90) / 3
+
+
+* gap : It is an property very much similar to margin i.e., it can be used for adding spaces between the elements in the grid
+    - Syntax : gap: row-gap column-gap;
+    - We can even use 2 separate properties for gap i.e., 'row-gap' and 'column-gap'
+    - If we give only 1 value for gap then it would be applied for both row and column as well
+
+
+* justify-items : It is an property used to justify the elements inside each grid cell i.e., the elements can be bought to the center, end, start etc. (It justifies with reference to the columns)
+    - The values are similar to that of the ones discussed in flex
+
+
+* align-items : It is also an property used to justify the elements inside each grid cell i.e., the elements can be bought to the center, end, start etc. (It justifies with reference to the rows)
+    - The values are similar to that of the ones discussed in flex
+
+
+* 'justify-self' & 'align-self' are 2 other properties which are similar to 'justify-items' and 'align-items' but, the only difference is that these properties are used for only 1 particular element and not for the whole elements in the grid
+
+
+* 'justify-content' & 'align-content' are 2 other properties that are similar to 'justify-items' and 'align-items' but, the difference between them is that, the content properties is applied on the whole grid i.e., the grid itself is justified or aligned when these properties are used. On the other hand, if we use items properties, then only the elements inside the grid are justified or aligned
+    - Let's assume the values of both 'justify-content' and 'align-content' properties are same. Then instead of using 2 seperate properties we can simply use, 'place-content: center;'  Since this one property is equivalent to justify-content: center; align-content: center;
+
+
+repeat() is an function used to repeat an same thing again and again
+    - For example, if we had to write 1fr 3 times then we can use the repeat function i.e., repeat(3, 1fr);  is equivalent to 1fr 1fr 1fr;
+
+
+minmax() is another function in which we give an minimum value and an maximum value
+    - Let's say for 'height' property we use this function and give the values as 'minmax(100px, 150px);'  This means the height's value must be minimum of 100px and maximum of 150px and should not exceed that
