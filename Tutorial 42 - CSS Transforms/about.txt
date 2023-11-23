@@ -1,0 +1,46 @@
+There are 2 types of transforms that are used in CSS :
+1) 2D Transforms
+2) 3D Transforms
+
+
+transfrom is an property used to rotate, scale up, scale down etc., elements as we desire
+
+Some of the values of tranform property are :
+
+* rotate() : rotate is an function in which we must input the deg (degrees) or turn (1 turn = 360deg) to rotate the element
+    - The rotate function rotates with respect to the mid point of the figure i.e., for square it rotates with respect to the point where both it's diagonals meet
+    - For example, transform: rotate(90deg);  is equivalent to transfrom: rotate(0.25turn);
+
+
+We also have seperate values such as rotateX(), rotateY(), rotateZ(), rotate3d() to rotate with respect to one of particular axises
+
+
+* scale : scale is an function which is used to increase or decrease the size of the given element
+    - For example, tranform: scale(1.5);
+    - The above example means that the element has been increased (or scaled up) 1.5 times bigger than it's original size
+
+
+In scale also we have seperate values for particular axises i.e., scaleX(), scaleY(), scaleZ(), scale3d()
+
+
+* skew : skew is an function in which we must input the deg or turn. Basically skew is something like the element's top left corner and it's bottom right corner being pulled at the same time (visualize a square)
+    - For example, tranform: skew(10deg);
+    - skew is not applicable for z-axis
+
+
+In skew also we have seperate values for particular axises i.e., skewX(), skewY()
+
+
+* translate : translate is an function which can be used to change the position of the element
+    - For example, tranform: translate(20px, 10px);
+    - The above example means, to move the element 20px w.r.t. x-axis and 10px w.r.t. y-axis
+    - If we give only 1 value for the translate function, then the element will move only w.r.t. the x-axis
+
+
+translate also has seperate values for particular axises i.e., translateX(), translateY(), translateZ(), translate3d()
+
+
+- transform-origin : This is not an value of transform property instead, this itself is another property
+    - Let's assume we want to rotate an element, so we know that the element will rotate w.r.t. it's mid point. This is because the default value of transform-origin is 50% 50%;
+    - So using this property, we can change the point from which an element is rotated 
+    - If we give the values as 0% 0%;  then we can rotate a square from it's top left corner instead of the point where it's diagonals meet  i.e., it's mid point 
