@@ -1,0 +1,57 @@
+Syntax to define an animation :
+    @keyframes name_of_the_animation {
+        Code;
+    }
+
+
+animation property is made up of 7 different properties :
+
+1) animation-name : In this property, we must give the name of the animation that we want to apply for an element
+    - Syntax : animation-name: myAnimation;
+    - In the above syntax, myAnimation is the name of the animation that should be applied for the element
+
+
+2) animation-duration : In this property, we give the time for how long must the animation take place
+    - Syntax : animation-duration: 2s (time);
+    - For the above written syntax the animation will take place for 2 seconds
+
+
+3) animation-timing-function : This property helps us to know how does the element move initially and as it goes on moving until it's destination (or at what speed at particular instance of time)
+    - cubic-bezier() is the value that tells about this movement or the speed of the element at particular instances
+
+
+4) animation-delay : In this property also we must give a time and this time means, after how long should the animation take place
+    - Syntax : transition-delay: 1s (time);
+    - For the above written syntax the animation will start after 1 second
+
+
+5) animation-iteration-count : In this property, we can define how many times should the animation occur
+    - Syntax : animation-iteration-count: 3;
+    - For the above written syntax the animation will occur 3 times only
+    - We can even make the value 'infinte'
+
+
+6) animation-direction : In this property, we can define the direction of animation i.e., reverse, alternate, alternate-reverse, normal etc.
+    - reverse : When we use this value the animation takes place backwards
+    - alternate : For example, if the element is moving from left-right then using this value, we can make it move left-right once and the next time right-left and it goes on
+    - alternate-reverse : It is an combination of reverse and alternate i.e., the element if moving from left-right, it will move right-left once and left-right next and goes on
+    - normal : It is the default value
+
+
+7) animation-fill-mode : This property helps the element to retain it's property even after the iteration count is over
+    - Some of the values are : 
+        - backwards : The element will retain it's properties i.e., the properties that the element has at the start of the animation
+        - forwards : The element will retain it's properties i.e., the properties that the element has at the end of the animation
+        - both : It is the combination of backwards and forwards
+
+
+* animation-play-state : This property is used to pause the animation or keep it running
+    - Some of the values are :
+        - running : It keeps the animation playing until the iteration count is completed
+        - paused : If we use this value, we can stop the element right at the point where it was running i.e., say element moves from 0-9 and we use paused at 5 then the element will stop right at 5 itself and won't return back to it's normal position
+
+
+* animation : This property is a combination of all 7 properties discussed above
+    - Syntax : name duration timing-function delay iteration-count direction fill-mode;
+    - We can even leave the properties that we don't require in the given syntax
+    - Also if we want to add more than 1 animation, we can use comma (,) to separate the animations i.e., name1 duration1 timing-function1 delay1 iteration-count1, name2 duration2 timing-function2 iteration-count2 direction2;

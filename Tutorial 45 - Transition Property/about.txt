@@ -1,0 +1,30 @@
+Transition is nothing but changing from one state to another in a smooth manner
+
+
+transition property is made of 4 different properties :
+
+1) transition-property : In this property we must name the property that we require to get transitioned
+    - For example, we want to apply transition for transform property then,
+        transition-property: transfrom;
+    - If we want to add multiple properties then we can use an comma (,) to separate the properties
+    - We also have an value 'all' and if we apply this value then the transition will be applicable for all the properties written
+
+
+2) transition-duration : In this property we give the time for how long must the transition take place
+    - Syntax : transition-duration: 3s (time);
+    - For the above written syntax the transition will take place for 3 seconds i.e., for the 'transform' property the transition duration will be 3 seconds since the 'transition-property' property is 'transform'
+
+
+3) transition-timing-function : This property helps us to know how does the element move initially and as it goes on moving until it's destination (or at what speed at particular instance of time)
+    - cubic-bezier() is the value that tells about this movement or the speed of the element at particular instances
+
+
+4) transition-delay : In this property also we must give a time and this time means, after how long should the transition take place
+    - Syntax : transition-delay: 1s (time);
+    - For example, we have kept the 'transform' property in a particular class selector and let's say we have not added that class to any of the elements. Now if we add it to any element the transition will take place after 1 second because the 'transition-delay' is 1s and the transition will take place for 3 seconds since the 'transition-duration' is 3s
+
+
+
+- We have another property that combines all these 4 properties together i.e.,
+    - Syntax : transition: transition-property transition-duration transition-timing-function transition-delay;
+    - transition: transform 3s ease-in-out 1s;  is equivalent to all the 4 properties written above separately
