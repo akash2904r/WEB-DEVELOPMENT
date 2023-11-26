@@ -1,0 +1,42 @@
+object-fit is an property used to take care of the overflowing images from an container
+
+Some of the values used for this property are :
+
+1) cover : This value is used to cover the whole width and height of the container without loosing the aspect ratio but since we might not have the perfect aspect ratio aligning with our height and width, some portion of the image might be cut down
+    - For example, if an image's height and width are say 1000px each and the height and width of the container is 250px 350px then we might not be able to fit the whole image in this height and width combo
+    - Therefore we just cut down some portion of the image to fill the given height-width and to make sure the image doesn't loose it's aspect ratio
+
+
+* object-position : This is an property used to tell which part of the image should be covered in the container i.e., when we use 'cover' value
+    - Syntax : object-position: top right;
+    - The syntax means that the top-right part of the image will be displayed in container. Similarly, we can use bottom, left, center etc, values also
+    - If we use the values as px then there is some space given in the left and the top part of container i.e., object-position: 10px 20px;
+    - If the values are given as 10px 20px, then a 10px space is given in the left side of the container and 20px space is given in the top side of the container
+    - We can even use % as the units
+
+
+2) contain : This value is used to display the whole image but since we are displaying the whole image, the image might not cover the whole container and instead there might be some space which is left empty inside the container
+
+
+3) fill : This value is the default value of 'object-fit' property and it is also used to cover the whole container but when we use this property it just completely fills the image into the container without maintaining the aspect ratio i.e., as an result the image might be distorted
+
+
+4) scale-down : When this value is used the imgae is scaled down into a smaller version and this smaller version might or might not overflow from the container but the image's aspect ratio is maintained
+
+
+
+* background-image : This property is used to apply the image as an background for an conatainer and the image is applied in such a way that it is similar to that of the value 'cover' of the 'object-fit' property
+    - This property has many values to add the image. One of the most used value is 'url("")'
+
+
+Whenever we use 'background-image' property and the image is smaller than the container then the image starts repeating in the left over space i.e., in the x-axis and y-axis 
+
+
+* background-repeat : This property is used to stop the repeatation of image when we use 'background-image' property
+    - Some values used are :
+        - no-repeat : To stop repeatation in both x-axis and y-axis
+        - repeat-x : If size of conatainer is larger than image with reference to x-axis then the image would repeat but it won't repeat in the y-axis
+        - repeat-y : It is similar to repeat-x
+
+
+* background-position : This property is similar to 'object-position' property but this property is used for the background
