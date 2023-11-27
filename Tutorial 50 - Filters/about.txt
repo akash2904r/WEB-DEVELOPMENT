@@ -1,0 +1,22 @@
+Some of the values used in filter property are : 
+
+1) blur() : This value is used to increase or decrease the bluriness of the image
+    - px can also be used as unit
+
+2) brightness() : As the name itself suggests, this value is used to increase and decrease the brightness of an image 
+
+3) contrast() : Used to increase or decrease the contrast of an image 
+
+4) greyscale() : When we use this property, we can make our image into a black-white image (i.e., when 100%)
+
+5) sepia() : It is kind of similar to greyscale, but the color is bit different than black-white
+
+6) invert() : This value is used to invert an image i.e., to convert an image into it's negative version
+    - It's value ranges from 0 to 1 (or) we can % as unit
+
+7) opacity() : Used to deal with the transparency of the image
+
+
+
+We can apply mutiple filters by leaving space between each value i.e., 
+    - For example, filter: brightness(100%) contrast(30%) opacity(0.3);

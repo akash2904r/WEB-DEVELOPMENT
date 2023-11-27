@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+
+    <style>
+        .img1 {
+            height: 250px;
+            width: 350px;
+            object-fit: contain;
+        }
+
+        .blur {
+            filter: blur(10px);
+        }
+
+        .img2 {
+            height: 375px;
+            width: 550px;
+            object-fit: contain;
+        }
+
+        .bright {
+            filter: brightness(60%) contrast(80%);
+            /* filter: invert(80%); */
+        }
+
+        .grey {
+            /* filter: grayscale(100%); */
+            filter: sepia(100%);
+            /* filter: opacity(0.5); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="img1" src="https://i.pinimg.com/736x/1b/71/d2/1b71d285865c03860f9f2e2124430c64.jpg" alt="Yamamoto pic">
+        <img class="blur img1" src="https://i.pinimg.com/736x/1b/71/d2/1b71d285865c03860f9f2e2124430c64.jpg" alt="Yamamoto pic">
+
+        <br>
+        <img class="img2 bright" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8d05b1b4-2cce-4895-8bb5-22ebe02219a5/dfiiotf-30f10df4-0c9b-408a-a821-4b26e1feaf10.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhkMDViMWI0LTJjY2UtNDg5NS04YmI1LTIyZWJlMDIyMTlhNVwvZGZpaW90Zi0zMGYxMGRmNC0wYzliLTQwOGEtYTgyMS00YjI2ZTFmZWFmMTAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0KzQlE_U4JKq9oWGDfGHFz6QAjAuRky8K1xfrYztLTQ" alt="Madara pic">
+        <img class="img2 grey" src="https://staticg.sportskeeda.com/editor/2023/06/9ef83-16874442710216-1920.jpg" alt="Yami pic">
+    </div>
+</body>
+
+</html>
