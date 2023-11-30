@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:rgb(49, 49, 49);
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    background-position: center center;
+}
+
+.opacity {
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.65;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    padding-top: 3.5vh;
+    max-width: 75vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 28vh;
+    flex-wrap: wrap;
+}
+
+nav img {
+    width: 14%;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+.img {
+    height: 4vh;
+    display: inline-flex;
+    border: 1px solid grey;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    column-gap: .3em;
+    padding: .14em .6em;
+}
+
+.font {
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+select {
+    -webkit-appearance: none;
+    color: white;
+    font-size: 1em;
+    background-color: black;
+    border: none;
+}
+
+.img img {
+    width: 1.5vw;
+}
+
+nav button {
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 6vw;
+    height: 5.5vh;
+    font-size: .9em;
+    margin-left: 1.5vw;
+}
+
+.sign {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    max-width: 75vw;
+    color: white;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 75vw;
+    margin: auto;
+}
+
+.item {
+    width: 75vw;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 3vh;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 1vh;
+}
+
+input {
+    background-color: rgba(22, 22, 22, 0.692);
+    color: white;
+    font-size: 1em;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 25vw;
+    height: 8vh;
+    padding-left: 1em;
+    position: relative;
+    z-index: inherit;
+}
+
+input:focus {
+    border: 3px solid white;
+    
+}
+
+input::placeholder {
+    color: rgb(196, 196, 196);
+}
+
+.font button {
+    position: relative;
+    z-index: 10;
+    background-color: red;
+    border: 2px solid red;
+    color: white;
+    font-size: 1.5em;
+    width: 14vw;
+    height: 8vh;
+    border-radius: 5px;
+}
+
+.email {
+    margin-top: 2vh;
+    display: flex;
+    column-gap: .5em;
+    justify-content: center;
+}
+
+.email a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .4em;
+}
+
+button:hover {
+    background-color: rgba(206, 0, 0, 0.959);
+    border: 1px solid rgba(206, 0, 0, 0.959);
+    cursor: pointer;
+}
+
+.block {
+    margin-top: 1vh;
+    background-color: black;
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    justify-content: center;
+}
+
+.video {
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.video img {
+    width: 35vw;
+    object-fit: contain;
+    grid-row: 1/1;
+    grid-column: 1/1;
+}
+
+.video video {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    width: 26.5vw;
+    justify-self: center;
+    align-self: center;
+}
+
+.vid2 video {
+    height: 60vh;
+    width: 21.5vw;
+    justify-self: center;
+    align-self: start;
+}
+
+.zindex {
+    z-index: 12;
+}
+
+.text1 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4vw;
+}
+
+.text1 h3 {
+    padding: 0;
+    padding-top: 2vh;
+}
+
+.block2 img {
+    grid-row: 1/1;
+    grid-column: 1/1;
+}
+
+.block2 .img2 {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    justify-self: center;
+    align-self: flex-end;
+    margin-bottom: 16vh;
+}
+
+.strangerthings {
+    height: 6em;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1.5fr;
+    grid-template-rows: 6em;
+    align-items: center;
+    background-color: black;
+    border: 1px solid gray;
+    border-radius: 15px;
+}
+
+.strangerthings .img1 {
+    width: 6vw;
+    height: 12vh;
+    grid-row: 1/1;
+    grid-column: 1/2;
+}
+
+.strangerthings .img2 {
+    margin: 0;
+    height: 6em;
+    width: 3em;
+    grid-row: 1/1;
+    grid-column: 3/4;
+    object-fit: contain;
+}
+
+.strangerthings h5 {
+    color: rgb(88, 105, 255);
+    font-weight: 400;
+}
+
+.img2 {
+    width: 20vw;
+}
+
+.text2 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 1vw;
+}
+
+.text2 h3 {
+    padding: 0;
+    padding-top: 2vh;
+}
+
+.newblock {
+    margin-top: 1vh;
+    width: 100vw;
+    padding-top: 10vh;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 75vw;
+    justify-content: center;
+    row-gap: 2vh;
+    padding-bottom: 10vh;
+}
+
+.newblock h1 {
+    justify-self: center;
+    padding-bottom: 2vh;
+}
+
+.question {
+    padding: 0 1.5vw;
+    height: 12vh;
+    background-color: rgb(49, 49, 49);
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+.newblock h4 {
+    margin-top: 5vh;
+}
+
+.newblock .email {
+    margin: 0;
+}
+
+.lastblock {
+    margin-top: 1vh;
+    padding: 10vh 0;
+    width: 100vw;
+    background-color: black;
+    color: rgb(189, 194, 201);
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    row-gap: 2vh;
+}
+
+.lastblock a {
+    color: rgb(189, 194, 201);
+}
+
+.occupy {
+    grid-row: 1/1;
+    grid-column: 1/5;
+}
+
+.last {
+    grid-row: 5/5;
+    grid-column: 3/5;
+}
+
+.lastblock .img {
+    grid-row: 6/6;
+    grid-column: 1/5;
+    width: 8vw;
+}
