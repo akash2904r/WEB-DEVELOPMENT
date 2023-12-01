@@ -1,0 +1,40 @@
+Whenever we use an 'var' to declare an variable that means the variable is created with a global scope
+
+Therefore instead of using 'var' we use an 'let'
+
+'let' is also used to declare an variable but in a block level scope
+    - In case if an block doesn't contain an variable 'a' and we have declared 'a' using 'let' outside the block. Therefore if we try to get the value of 'a' inside the block using 'console.log(a)' then, the value of 'a' which is declared outside the block will be displayed
+
+typedef is used to get the type of an variable
+    - Syntax: typedef var_name
+
+
+Some rules to declare an identifier (or) variable
+- Variable names can start from $ as well
+- Variable names cannot start from numerics
+
+
+
+JavaScript consists of two types of data types:
+    - Primitive data types : They are the basic data types which are the building blocks of the other data types
+    - Objects : They are the user defined data types
+
+
+* Primitive data types consists of 7 data types :
+    - Null : This means nothing (The typeof null is an object)
+    - Number : This could be an integer or an floating value
+    - String : Anything written inside a dobule quotes ""
+    - Symbol : 
+    - Undefined : This is when an variable is defined and not intialized
+    - Boolean : True or False
+    - BigInt : Used to store big integer values
+
+
+* An object is an key-value pair i.e.,
+
+let o = {
+    name : "Myself",
+    "Current Age" : 19
+}
+
+We can declare an string even without an double quotes inside the object block (i.e., only for the keys not for the values) but, if there is an gap or more than 1 word in the string then we must use the double quotes

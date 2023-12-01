@@ -1,0 +1,19 @@
+JavaScript can be used in both frontend and backend
+
+- When javascript is used in frontend we usually use a <script> tag or a .js file
+- On the other hand, when we use it in the backend we use node.js
+
+
+var is an keyword used to declare an variable
+
+confirm() is used to give us a "OK or Cancel" button to choose from
+
+prompt is used to get a user input
+
+
+We can even change the styling using javascript like,
+    - document.title = "JavaScript Intro";
+    - document.body.style.backgroundColor = "black";
+    - document.body.style.color = "white";
+
+Whenever we use javascript to style elements the style is applied as an inline CSS to the elements
