@@ -1,0 +1,81 @@
+We have 5 loops in JavaScript
+
+* for loop
+    - Syntax : for(initialization; condition; updation) {
+                   Code
+               }
+
+    - In the initialization part we initialize a variable and in the condition part we give a condition until when the loop should run. Finally, in the updation part we mostly use either the increment or decrement operators (i.e., ++ (or) --)
+
+    - For example, for(let i = 0; i < 10; i++) {
+                       console.log(i)
+                   }
+
+    - The above example prints numbers from 0-9 since, i=0 we check the condition if (0 < 10) and if the condition is true, then the code is executed (i.e., 0 is printed). Then 0 is incremented to 1, now once again the condition is checked and if true, again 1 is printed. This goes on until (i > 10) or the condition becomes false
+
+
+
+* forin loop
+    - This is also similar to for loop but, it is mainly used to iterate over an object
+
+    - Syntax : for (const key in object) {
+                   const element = object[key];
+               }
+
+    - let o = {name : "Elon Musk", "Company name" : "SpaceX"}
+
+    - For example, for(const key in o) {
+                       console.log(key)
+                   }
+
+    - The example would print all the keys present in the object 'o' i.e., name and Company name
+
+
+            
+* forof loop
+    - This is also similar to for loop but, it is mainly used to iterate over iterable things such as, string or an array
+
+    - Syntax : for (const iterator of object) {
+                   Code
+               }
+
+    - For example, for(const c of "Chandu") {
+                       console.log(c)
+                   }
+
+    - The above example prints each character of Chandu separately in a new line
+
+
+
+* while loop
+    - When using 'while loop' we must manually take care of the updation part unlike 'for loop'
+
+    - Syntax : while(condition) {
+                   Code
+               }
+
+    - let i = 0
+
+    - For example, while(i < 6) {
+                       console.log(i)
+                       i++
+                   }
+
+    - The above example is used to print numbers from 0-5.
+
+
+
+* do-while loop
+    - This is very much similar to while loop but the only difference is that in while loop if the condition is not true then the code will not be executed but in this loop even the condition is false the code will run atleast once
+
+    - Syntax : do {
+                   Code
+               } while(condition)
+
+    - let i = 10
+
+    - For example, do {
+                       console.log(i++)
+                   } while (i <= 5)
+
+    - Even though the condition is wrong the loop will be executed once and we can see 10 being printed

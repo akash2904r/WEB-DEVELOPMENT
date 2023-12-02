@@ -1,0 +1,89 @@
+* ARITHMETIC OPERATORS
+    - '+' : Gives the sum
+    - '-' : Gives the difference
+    - '*' : Gives the product
+    - '/' : Gives the quotient
+    - '%' : Gives the remainder
+    - '**' : If 3**2, it means 3 power 2 and the return value would be 9
+    - '++' : Increments the value by 1
+    - '--' : Decrements the value by 1
+
+* ASSIGNMENT OPERATORS
+    - '=' 
+    - '+=' : If a=2 and a+=3, it means a = a+3 and the return value would be 5
+    - '-=' : Similar to '+=', if a-=3 (a = a - 3) then answer is -1
+    - '*=' : Similar to '+=', if a*=3 (a = a * 3) then answer is 6
+    - '/=' : Similar to '+=', if a/=3 (a = a / 3) then answer is 0.6666...
+    - '%=' : Similar to '+=', if a%=3 (a = a % 3) then answer is 2
+    - '**=' : Similar to '+=', if a**=3 (a = a**3) then answer is 8
+
+* COMPARISON OPERATORS
+    - '==' : Helps to know if two values are equal or not
+        - Checks only the values to return true or false
+        - For example, "3" == 3 is true according to javascript when using '=='
+    - '===' : Helps to know if two values and their types are equal or not
+        - Checks both values as well as the type to return true or false
+        - For example, "3" === 3 is false
+    - '!=' : Helps to know if two values are not-equal or not
+        - Similar to '==' checks only values
+    - '!==' : Helps to know if two values and their types are not-equal or not
+        - Similar to '===' checks both values and type
+    - '<' : Helps to know if one value is less than another one
+    - '>' : Helps to know if one value is greater than another one
+    - '<=' : Helps to know if one value is less than or equal to the other value
+    - '>=' : Helps to know if one value is greater than or equal to the other value
+    - '?:' : (Ternary operator) It can be used as an substitute for an if-else statement
+        - For example, a = (a>b) ? a=1 : b=1;
+        - The above example is used to assign value for the least greatest number among a and b
+
+* LOGICAL OPERATORS
+    - '&&' : Logical AND operator
+    - '||' : Logical OR operator
+    - '!' : Logical NOT operator
+
+
+
+- Comments
+    - // -> Single line comment
+    - /**/ -> Multi line comment
+
+
+
+Conditional Statements in JavaScript
+
+- if statement 
+    - Syntax : if(condition) {
+                   Code
+               }
+
+    - If the condition is true then the code inside the block will be executed
+
+
+
+- if-else statement
+    - Syntax : if(condition) {
+                   Code 1
+               }
+               else {
+                   Code 2
+               }
+
+    - If the condition is true then the code 1 will be executed, if not true then the code 2 will be executed
+
+
+
+- else-if ladder
+    - Syntax : if(condition 1) {
+                   Code 1
+               }
+               else if(condition 2) {
+                   Code 2
+               }
+               .
+               .
+               .
+               else {
+                   Code n
+               }
+
+    - If 'condition 1' is true then the 'code 1' will be executed, if not 'condition 2' will be checked and if 'condition 2' is true then 'code 2' will be executed and if neither of the conditions are true, then the 'else' part containing 'code n' will be executed

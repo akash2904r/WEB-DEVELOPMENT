@@ -1,0 +1,31 @@
+Whenever a particular part of our code is becoming repetitive we use functions to make it easier to access that part of the code frequently
+
+Syntax to define a function is
+    - function name(params) {
+          Code
+      }
+
+    - name is the name of function and params means the parameters
+
+    - For example, function sum(a, b, c = 0) {
+                       return a + b + c
+                   }
+
+    - The above written example is for sum of 3 numbers, in case only 1st and 2nd numbers are given then the 3rd number's value would be taken as 0 by default as it is declared as an default parameter
+
+    - In case, if 1st or 2nd number's value are not given then the value returned would be an NaN (i.e., Not a number)
+
+
+
+We can assign an variable with a function as its value
+
+- Syntax : const name = (params)=> {
+              Code
+           }
+    
+    - name is the variable name and params means the parameters
+    - We can even use a 'var' or 'let' keyword to declare the variable, not necessarily an 'const'
+
+- This type of functions are called arrow functions
+
+- Main advantage of using arrow functions is that we can pass an function inside another function
