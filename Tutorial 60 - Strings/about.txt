@@ -1,0 +1,100 @@
+String are used to store and manipulate text and strings are immutable
+
+Syntax : let a = "string"
+
+To find the length of string we can use, string_name.length
+
+
+
+Whenever we require to write an string template that is a bit tough like,
+
+    - "My name is " + me + " and my friend's name is " + frnd
+
+    - Instead of concatinating string with variables we can just use the backtic (``) to insert the variables inside string directly
+
+    - For example, `My name is ${me} and my friend's name is ${frnd}`
+
+    - The variable names can be written after a dollar symbol '$' inside an curly braces '{}' as shown in the example
+
+    - backtic can be found below 'escape key' and above 'tab key' on the keyboard
+
+    - Whenever we use backtic (``) to define a string, it is called as string interpolation
+
+    - The advantage of using backtic is that we can write an string template without even concatinating any variables in between and also we can use both double quotes and single quotes inside a backtic string
+
+
+
+Escape characters :
+
+    * \n => New line
+
+    * \t => One tab space
+
+    * In case we need to use a double quote inside a string then we can use ( \" ) 
+        - For example, let str = "Stri\"ng" then o/p would be Stri"ng
+
+    * \r => Carriage return
+        - For example, let s = "string\rab" then o/p would be abring i.e., when we use '\r' it auto completes the part of string on its right side with respect to string on its left side
+
+        - In case the size of the right part of the string is greater than the left part then the right part of the string is given as the output
+
+        - Another example 
+            - let s = "akash\rA" then o/p is Akash
+            - let s = "cocktail\rmo" then o/p is mocktail
+            - let s = "apple\rorange" then o/p is orange
+
+
+
+Some of the properties and functions used in string are :
+
+* toUpperCase() : This is an function and it is used to convert the string into upper case alphabets
+    - For example, let str = "MyBestFriend" and str.toUpperCase() then o/p would be MYBESTFRIEND
+    - In case if you try to use this on a string containing numbers then there will be no change seen on the numbers
+
+
+* toLowerCase() : This is also a function and similar to previous function this function converts the string into lower case alphabets
+    - For example, let str = "MyBestFriend" and str.toLowerCase() then o/p would be mybestfriend
+    - In case if you try to use this on a string containing numbers then there will be no change seen on the numbers
+
+
+* length : length is an property therefore we don't require to put parenthesis i.e., str_name.length
+    - For example, let str = "Chocolate Cake" then o/p is 14
+
+
+* slice() : This is also a function and is used to cut (or) slice an string 
+    - For example, let str = "Chocolate Cake" and str.slice(0, 9) then the o/p is Chocolate
+    - If slice(10) then the o/p would be Cake i.e., if we give only one value then the second value will be taken as the last index of the string
+
+
+* replace() : This is also a function and is used to replace any part of string with some other value
+    - For example, let str = "Chocolate Cake" and str.replace("Cake", "Truffle") then the o/p will be Chocolate Truffle
+    - If there are 2 or more occurance of the given string then only the first occurance will be changed i.e., let str = "Chocolate Cakey Cake" and str.replace("Cake", "Truffle") then the o/p will be Chocolate Truffley Cake
+
+
+* concat() : This is also a function and is used to concat or merge 2 or more strings
+    - For example, let str1 = "Drag", str2 = "on" and str1.concat(str2) then o/p will be Dragon
+    - We can even concat infinite number of strings by using comma to seperate the strings i.e., str1.concat(str2, str3,... strn)
+
+
+* trim() : This is also a function and is used to remove the whitespaces from the start of an string
+    - For example, let str = "   Chocolate Cake" and str.trim() then the o/p would be Chocolate Cake
+
+
+* charAt() : This is also a function and is used to get the character at an particular index
+    - For example, let str = "Amrit Shankar" and str.charAt(3) then the o/p would be if
+    - If the index given is greater than the size of the string then no value is returned
+
+
+* indexOf() : This is also a fucntion and is similar to previous function but this function returns the index of a given character in an string
+    - For example, let str = "Amrit Shankar" and str.indexOf("a") then the o/p would be 8
+    - If the character is not found in the string then the value returned would be -1
+
+
+* startsWith() : This is also an fucntion and is used to check if an string starts with a particular character or string portion
+    - For example, let str = "Dilip" and str.startsWith("Di") then the o/p will be true 
+    - This function returns only boolean values either true or false
+
+
+* endsWith() : This is also an function and is similar to the previous function but this fucntion checks if an string ends with a particular character or string portion
+    - For example, let str = "Dilip" and str.endsWith("Di") then the o/p will be false
+    - This function returns only boolean values either true or false
