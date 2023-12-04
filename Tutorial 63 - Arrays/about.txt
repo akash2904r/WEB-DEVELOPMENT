@@ -1,0 +1,156 @@
+Array are variable which can hold more than one value and an array can contain heterogenous data
+
+- Arrays are mutable datatypes
+
+- Syntax : let a = []
+
+- An array is an object type
+
+- a.length can be used to find the size of an array
+
+
+
+Some of the array methods :
+
+* toString() : This method is used to convert an array into a toString
+    - For example, let arr = [1, 2, 3] and arr.toString() then the o/p will be 1,2,3   i.e., an comma seperated string 
+
+
+* join() : This method is used to join the elements of an array by an user defined value
+    - For example, let arr = [1, 2, 3] and arr.join(" -> ") then the o/p will be 1 -> 2 -> 3
+    - In case, if we give an number in place of an string then that number will be used to join the elements i.e.,
+        - let arr = [1, 2, 3] and arr.join(9) then o/p is 19293
+
+
+* pop() : This method is used to remove the last element in an array
+    - For example, let arr = [1, 2, 3, 4, 5] and arr.pop() then the arr will be altered into [1, 2, 3, 4]
+    - In case, if we try to console.log(arr.pop()) then it would return the element that has been popped i.e., 5 for this example
+
+
+* push() : This method is used to add an element to the end of an array
+    - For example, let arr = [1, 2, 3] and arr.push("Chandu") then the arr will be altered into [1, 2, 3, `Chandu`]
+    - In case, if we try to console.log(arr.push()) then it would return the size of the altered array i.e., 4 for this example
+
+
+* shift() : This method is similar to pop method but the only difference is that shift method removes the first element of an array
+    - For example, let arr = [1, 2, 3, 4, 5] and arr.shift() then the arr will be altered into [2, 3, 4, 5]
+    - In case, if we try to console.log(arr.shift()) then it would return the element that has been removed i.e., 1 for this example
+
+
+* unshift() : This method is similar to push method but the only difference is that unshift method adds an element at the start of an array
+    - For example, let arr = [1, 2, 3] and arr.unshift("Amrit") then the arr will be altered into [`Amrit`, 1, 2, 3]
+    - In case, if we try to console.log(arr.unshift()) then it would return the size of the altered array i.e., 4 for this example
+
+
+* delete : delete is an operator and it is used to delete an element in an array
+    - For example, let arr = [1, 2, 3, 4, 5, 6] and delete arr[5] then the arr will be altered into [1, 2, 3, 4, 5, empty]
+    - empty in sense undefined
+    - When we use the delete operator to delete an element from an array, the size of array doesn't change even after deleting the element as you can see the example i.e., size of array before delete is 6 and size of array after delete is also 6
+    - In case, if we try to console.log(delete arr[5]) then it would return true always
+
+
+* concat() : This method is used to concat or merge 2 or more arrays together
+    - For example, let a1 = [1, 3, 5] , a2 = [2, 4, 6] and a1.concat(a2) then the o/p is nothing
+    - In case, if we try to console.log(a1.concat(a2)) then it would return the concatinated array i.e., [1, 3, 5, 2, 4, 6] for this example
+    - We can write infinitely many parameters inside the concat() function i.e., a1.concat(a2, a3, a4 ... aN)
+    - No change is done to the orginal arrays while using the concat() function
+
+
+* sort() : This method is used to sort the elements in an array
+    - For example, let a = [1, 2, 3, 12, 13, 22, 34] and a.sort() then no value is shown
+    - In case, if we try to console.log(a.sort()) then it would return the sorted array i.e., [1, 12, 13, 2, 22, 3, 34] for this example
+    - The sorting is done based on the first digit 
+    - We can use an compare() function to make our own sorting technique
+
+
+* splice() : This method is used to insert or remove items in an array
+    - For example, let b = [1, 2, 3, 4, 5] and a.splice(1, 3) then b will be altered into [1, 5]
+    - In case, if we try to console.log(a.splice(1, 3)) then it would return the removed portion of the array i.e., [2, 3, 4] for this example
+    - The first parameter in splice() function is the index from which the elements should be removed and the second parameter is how many elements from that index should be removed
+    - If we give a.splice(1, 3, 23, 34) then the b would be altered into [1, 23, 34, 5]
+    - Anything written after the first 2 parameters are inserted into the array from the index where the elements were removed
+
+
+* slice() : This method is used to remove a portion of an array
+    - For example, let b = [1, 2, 3, 4, 5] and b.slice(1, 3) then [2, 3] portion of the array can be sliced
+    - let b = [1, 2, 3, 4, 5] and b.slice(3) then [4, 5] portion of the array can be sliced
+    - No change takes place in the original array due to slice() function
+    - In case, if we try to console.log(a.slice(1, 3)) then it would return the removed portion of the array i.e., [2, 3] for this example
+    - The first parameter in slice() function is the index from which the elements should be removed and the second parameter is till which index should it be sliced
+
+
+* reverse() : This method is used to reverse the order of the elements in an array
+    - For example, let b = [1, 2, 3, 4, 5] and b.reverse() then b will be altered into [5, 4, 3, 2, 1]
+    - In case, if we try to console.log(a.reverse()) then it would return the reversed array i.e., [5, 4, 3, 2, 1] for this example
+
+
+
+
+- forEach loop : Calls a function once for each array element
+    - For example, 
+        let a = [1, 2, 3]
+        a.forEach((value, index, arr) => {
+            Code 
+        })
+
+
+
+
+- map() : map is used when an new array is need to be created using an array that already exists by performing some operations on the existing array
+
+    - For example, let arr = [1, 2, 3, 4, 5] and we need an new array that is the square of the existing array then we can use map
+
+        - newArr = arr.map((e)=> {
+            return e**2
+          })
+
+    - The output would be [1, 4, 9, 16, 25]
+
+
+
+
+- filter() : filter can be used to create a new array by filtering the values of an already existing array by passing them into a test
+
+    - For example, let arr = [1, 4, 9, 16, 25] and we need only the elements which are greater than 10
+
+        - const great10 = (e)=> {
+              if(e > 10)
+                  return true
+  
+              return false
+          }
+
+          console.log(newArr.filter(great10))
+
+    - We need to pass an predicate (or) function in the filter that acts as an test. For the above example, great10 acts as the predicate to test the elements of the array
+
+
+
+
+- reduce() : It basically reduces an array to a single value
+
+    - We need to give an function as the parameter for reduce method and it just applies the function for the first 2 elements of an array and then applies the function once again for the result1 from first 2 elements with 3rd element of the array and then again the result of 3rd and result1 with 4th element and goes on until the array ends
+
+    - For example, let arr = [1, 2, 3, 4, 5]
+
+        - const add = (a, b)=> {
+              return a + b
+          }
+
+          console.log(arr.reduce(add))
+
+    - Step 1 : 1 + 2 = 3
+      Step 2 : 3 + 3 = 6
+      Step 3 : 6 + 4 = 10
+      Step 4 : 10 + 5 = 15
+
+    - The steps depends on the function that has been given as the parameter. Since it is add here, we are adding the values
+
+
+
+
+- Array.from() : It is used to create an array from any other object
+
+    - For example, console.log(Array.from("Chandu"))
+
+    - O/p is ['C', 'h', 'a', 'n', 'd', 'u']
