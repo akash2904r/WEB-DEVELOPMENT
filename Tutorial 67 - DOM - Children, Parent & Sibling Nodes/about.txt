@@ -1,0 +1,102 @@
+Node can be an text or an element
+
+The space left in an element is also considered as an text
+
+Comment itself is an seperate node
+
+
+
+Some of the properties used in DOM : 
+
+* element.childNodes : This property is used to list out all the nodes present under an element
+    - This property returns an list or array of the nodes which can be accessed through indeces
+        - For example, document.body.childNodes returns [text, div.container, text, script]
+
+
+* element.children : This property is similar to .childNodes but it lists out all the elements (only elements not text) under an element (parent)
+    - This property returns an list or array of the elements which can be accessed through indeces
+        - For example, document.body.childNodes returns [div.container, script]
+
+
+* element.firstChild : This property returns the first child under an element
+    - The child here can be either a text or even an element
+    - For example, let a = document.body.childNodes; 
+        a = [text, div.container, text, script] then a.firstChild returns text
+
+
+* element.lastChild : This property is similar to .firstChild but it returns the last child under an element
+    - The child here can be either a text or even an element
+    - For example, let a = document.body.childNodes; 
+        a = [text, div.container, text, script] then a.lastChild returns script 
+
+
+* element.firstElementChild : This property is similar to .firstChild and returns the first element
+    - The child here can be only an element
+    - For example, let a = document.body.childNodes; 
+        a = [text, div.container, text, script] then a.firstElementChild returns div.container
+
+
+* element.lastElementChild : This property is similar to .lastChild and returns the last element
+    - The child here can be only an element
+    - For example, let a = document.body.childNodes; 
+        a = [text, div.container, text, script] then a.lastElementChild returns script
+
+
+* element.parentElement : This property returns the parent element of an particular node
+    - For example, let a = document.body.childNodes; 
+        a = [text, div.container, text, script] then a.parentElement returns body
+
+
+* element.nextSibling : This property returns the next node that appears after an particular element under the same parent
+    - For example, let a = document.body.childNodes; 
+        a = [text, div.container, text, script] then a[1].nextSibling returns text
+
+
+* element.previousSibling : This property returns the previous node that appears before an particular element under the same parent
+    - For example, let a = document.body.childNodes; 
+        a = [text, div.container, text, script] then a[3].previousSibling returns text
+
+
+* element.nextElementSibling : This property returns the next element (only element not text) that appears after an particular element under the same parent
+    - For example, let a = document.body.childNodes; 
+        a = [text, div.container, text, script] then a[1].nextElementSibling returns script
+
+
+* element.previousElementSibling : This property returns the previous element (only element not text) that appears before an particular element under the same parent
+    - For example, let a = document.body.childNodes; 
+        a = [text, div.container, text, script] then a[3].previousElementSibling returns div.container
+
+
+
+
+To understand the examples given in the following properties check the script.js and index.html files to understand in a better way
+
+* table.rows : This property is used to list out the rows an table
+    - For example, table.rows returns [tr, tr, tr, tr, tr] for the table given in index.html
+
+* table.caption : This property is used as an reference to <caption>
+    - For example, table.caption returns <caption>Coding Details</caption> for the table given in index.html
+
+* table.tHead : This property is used as an reference to <thead>
+    - For example, table.tHead returns <thead>...</thead> for the table given in index.html
+
+* table.tFoot : This property is used as an reference to <tfoot>
+    - For example, table.tFoot returns <tfoot>...</tfoot> for the table given in index.html
+
+* table.tBodies : This property returns the collection of <tbody> elements
+    - For example, table.tBodies returns [tbody] for the table given in index.html
+
+* tbody.rows : This property returns the collection of <tr> inside a table
+    - For example, tbody.rows returns [tr, tr, tr] for the table given in index.html
+
+* tr.cells : This property returns the collection of <td> and <th>
+    - For example, tr.cells  returns [td, td, td] for the table given in index.html
+
+* tr.sectionRowIndex : This property returns the index of <tr> inside enclosing element
+    - For example, tr.sectionRowIndex returns 1 for the table given in index.html
+
+* tr.rowIndex : Row number starting from 0
+    - For example, tr.rowIndex returns 2 for the table given in index.html
+
+* td.cellIndex : This property returns the number of cells inside existing <tr>
+    - For example, td.cellIndexreturns 1 for the table given in index.html

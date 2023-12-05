@@ -1,0 +1,26 @@
+DOM stands for Document Object Model
+
+DOM is used to map the entire HTML code as an documentary
+
+
+document.body is used to represent the body of an HTML code as an tree like structure
+
+
+Using DOM we can even inject inline CSS to the elements
+    - For example, document.body.style.backgroundColor = "black";
+
+
+
+BOM stands for Browser Object Model
+
+When we use BOM we get additional objects other than document such as location etc
+
+
+
+DOM and BOM are mainly used to target particular elements to style them or do some other changes
+
+
+
+window is also an object and it is an global object
+    - For example, window.document.body
+    - We can write this example even without the 'window.' portion
