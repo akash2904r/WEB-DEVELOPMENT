@@ -1,0 +1,52 @@
+Some other properties used in DOM :
+
+* element.getElementsByClassName() : This property returns the elements list that contain an particular class
+    - We need to give a class name as the parameter 
+    - For example, document.getElementsByClassName("box") returns [div.box, div.box, div#black.box, div.box, div.box, div.box, black: div#black.box]
+
+
+* element.getElementById() : This property returns the element that has an particular ID 
+    - We need to give an ID as the parameter
+    - For example, document.getElementById("black") will always target the div that has the content "Amrit Shankar 2.5" in it
+
+
+* element.querySelector() : This property is used to target an element through its CSS Selector
+    - We need to pass the selector name as the parameter
+    - For example, document.querySelector(".box") will target the first element that has .box selector in it
+    - In this case, the targeted element would be the div containing the content "Amrit Shankar 1"
+
+
+* element.querySelectorAll() : This property returns all the elements that contain an particular CSS Selector
+    - For example, document.querySelectorAll(".box") returns [div.box, div.box, div#black.box, div.box, div.box, div.box]
+    - We can use an ForEach loop to iterator over each element and add style
+        - For example, document.querySelectorAll(".box").forEach(e => {
+                           e.style.backgroundColor = "black"
+                           e.style.color = "cyan"
+                       })
+
+
+* element.getElementsByTagName() : This property returns all the particular kind of tags or elements
+    - For example, document.body.children[0].getElementsByTagName("div") returns [div.box, div.box, div#black.box, div.box, div.box, div.box, black: div#black.box]
+
+
+* element.getElementsByName() : This property returns all the elements that contain a particular name
+    - For example, document.getElementsByName("Ami") returns [div.box] i.e., the div containing the content "Amrit Shankar 5"
+    - In case, there were more elements with the name value as "Ami" then all the elements would have been listed out
+
+
+* element.matches() : This property is used to check if an element matches to a particular ID, Class (or) Tag etc
+    - We need to pass the ID, Class name (or) Tags as the parameter
+    - For example, document.body.children[0].children[5].matches(".box") returns 'true' and document.body.children[0].children[2].matches("#black") also returns 'true'
+    - Whereas document.body.children[0].children[3].matches("#black") returns 'false' and document.body.children[0].children[3].matches("div") returns 'true'
+
+
+* element.closest() : This property returns the element that matches to a particular ID, Class (or) Tag etc, and is closest to the element on which this property is applied
+    - We need to pass the ID, Class name (or) Tags as the parameter
+    - For example, document.body.children[0].children[5].closest(".box") returns the div that contains the content "Amrit Shankar 5" since it is the closest
+    - Whereas, for document.body.children[0].closest("body") returns the body
+
+
+* element.contains() : This property returns true, if elementB is present inside elementA (or) even if elementA == elementB
+    - For example, document.querySelector(".container").contains(document.querySelector(".box")) returns 'true'
+    - document.querySelector(".container").contains(document.querySelector("body")) returns 'false'. Since .container is inside body (i.e., body contains .container but .container does not contain body)
+    - So, document.querySelector("body").contains(document.querySelector(".container")) would return 'true'
