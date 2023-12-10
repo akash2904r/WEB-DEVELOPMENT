@@ -1,0 +1,175 @@
+Some more properties used in DOM : 
+
+* innerHTML : This property returns the HTML inside the selected element as an string
+    - This property is valid only for element nodes
+    - For example, (when .container has only one .box)
+        - document.querySelector(".box").innerHTML returns 'I am the first box'
+        - document.querySelector(".container").innerHTML returns '\n        <div class="box">I am the first box</div>\n    '
+    - By using, document.querySelector(".box").innerHTML = "I changed the content" we can change the content of .box
+
+
+* outerHTML : This property returns the HTML inside the selected element + the element itself as an string
+    - This property is valid only for element nodes
+    - For example, (when .container has only one .box)
+        - document.querySelector(".box").outerHTML returns '<div class="box">I am the first box</div>'
+        - document.querySelector(".container").outerHTML returns '<div class="container">\n        <div class="box">I am the first box</div>\n    </div>'
+
+
+* innerText : This property returns the text inside the selected element as an string
+    - For example, (when .container has only one .box)
+        - document.querySelector(".box").innerText returns 'I am the first box'
+        - document.querySelector(".container").innerText returns 'I am the first box'
+
+
+* outerText : This property returns the text inside the selected element as an string
+    - For example, (when .container has only one .box)
+        - document.querySelector(".box").outerText returns 'I am the first box'
+        - document.querySelector(".container").outerText returns 'I am the first box'
+
+
+- innerText and outerText returns the similar kind of output
+
+
+* tagName : This property returns the tag name of the element as an string
+    - This property is applicable only for elements
+    - For example, document.querySelector(".container").tagName returns 'DIV'
+
+
+* nodeName : This property returns the node name of the nodes as an string
+    - This property is applicable only for all kinds of nodes
+    - For example, 
+        - document.querySelector(".container").nodeName returns 'DIV'
+        - document.body.children[0].childNodes[0].nodeName returns '#text'
+
+
+* textContent : This property returns the text contents inside an element 
+    - For example, (when .container has only one .box)
+        - document.querySelector(".container").textContent returns '\n        I am the first box\n    '
+
+
+- hidden is an attribute which can be used for an element to hide the element
+    - For example, <div class="container" hidden></div> then this div won't be visible on the site
+        - document.querySelector(".container").hidden returns false 
+        - document.querySelector(".container").hidden = true, will apply the hidden attribute for that particular element
+
+
+* hasAttribute : This property returns true if a particular attribute is present in an element
+    - For example, document.querySelector(".container").hasAttribute("style") returns false
+    - If any styling is added then it would return true
+
+
+* getAttribute : This property returns the value of a particular attribute of an element
+    - For example, document.querySelector(".box").getAttribute("style") returns 'display: flex;'
+
+
+* setAttribute : This property is used to set an attribute for an element
+    - For example, document.querySelector(".box").setAttribute("style", "display: inline;") returns 'undefined' and the display value is changed to 'inline' from 'flex'
+
+
+* attributes : This property returns all the attributes present in an element
+    - For example, document.querySelector(".box").attributes returns {0: class, 1: style, class: class, style: style, length: 2}
+
+
+* removeAttribute : This property is used to remove an attribute present in an element
+    - For example, document.querySelector(".box").removeAttribute("style") returns 'undefined' and the style attribute is removed from .box element
+
+
+* designMode : When using this property we can simply edit anything on our website 
+    - After writing document.desingMode = "on" we can just simply use backspace to delete text, photos etc., on the website and we can even type other texts of our choice until the page is not reloaded
+
+
+* dataset : This property returns all the data attributes present in an element
+    - The values returned are in the form of key-value pairs avoiding the data word
+    - For example, document.querySelector(".box2").dataset returns {parent: 'cont2', createdby: 'akash'}
+
+
+
+
+
+Insertion Methods : 
+
+- let div = document.createElement("div")
+- div.innterHTML = "I was inserted by <b>Akash</b>"
+- div.setAttribute("class", "inserted")
+  
+
+The above 3 lines will help us to 
+    - create an element of type div
+    - then add "I was inserted by Akash" as it's inner HTML (where Akash would be bold since, the bold tag is used) 
+    - and lastly give this element a class of value 'inserted'
+
+Now we can insert this element by
+
+* append() : This property is used to insert an element at the end of a node
+    - For example, document.querySelector(".container2").append(div) would have inserted the div at the end of .container2
+
+
+* prepend() : This property is used to insert an element at the beginning of a node
+    - For example, document.querySelector(".container2").prepend(div) would have inserted the div at the beginning of .container2
+
+
+* before() : This property is used to insert an element before a node
+    - For example, document.querySelector(".container2").before(div) would have inserted the div before .container2 
+    - That is, div (or .inserted) would have become the 2nd element child of body instead of .container2
+
+
+* after() : This property is used to insert an element after a node
+    - For example, document.querySelector(".container2").after(div) would have inserted the div after .container2 
+    - That is, div (or .inserted) would have become the 3rd element child of body after .container2
+
+
+* replaceWith() : This property is used to insert an element at the position of a node by removing that particular node
+    - For example, document.querySelector(".container2").replaceWith(div) would have inserted the div by removing .container2 
+    - That is, div (or .inserted) would have become the 2nd element child of body by replacing (or removing) .container2
+
+
+* insertAdjacentHTML() : This property is used to insert any kind of HTML and we must pass any one among the 4 of the following as its parameter : 
+    - "afterbegin" : Inserts HTML into the element at the beginning
+    - "beforeend" : Inserts HTML into the element at the end
+    - "beforebegin" : Inserts HTML immediately before the element
+    - "afterend" : Inserts HTML immediately after the element
+
+
+* insertAdjacentElement() : This property is similar to insertAdjacentHTML but instead of HTML, we can insert specified elements at specified positions using this property and similarly we must pass any one of the 4 parameters as of it
+
+
+* insertAdjacentText() : This property is similar to insertAdjacentHTML but instead of HTML, we can insert text using this property and similarly we must pass any one of the 4 parameters as of it
+
+
+Examples
+    - document.querySelector(".container2").insertAdjacentHTML("beforebegin", "<div>Yo Whassup</div>") would inserted the div as 2nd element child of body
+
+    - document.querySelector(".container2").insertAdjacentElement("afterbegin", div) will move the .inserted div at the start of container even though .inserted was inserted using append method 
+
+    - document.querySelector(".container2").insertAdjacentText("afterend", "Hey there, buddy") would insert the text "Hey there, buddy" right after the .container2 ends
+
+
+
+
+* remove() : This property is used to remove (or delete) an node 
+    - For example, document.querySelector(".container").remove() would remove the .container element and making the .container2 as the 1st element child of body
+
+
+* classList : This property returns all the classes present in an element as an list
+    - For example, document.querySelector(".container2").classList returns ['container2', 'bg-black', 'cyan', value: 'container2 bg-black cyan']
+
+    - We can use some additional properties on classList like
+        - add() : Used to add a class for an element
+            - In case, if we insert a same class more than once, then the class is inserted only once
+            - For example, document.querySelector(".container2").classList.add("newclass") would add 'newclass' as one of the classes to .container2
+
+        - remove() : Used to remove a class of an element
+            - For example, document.querySelector(".container2").classList.remove("newclass") would remove 'newclass' from being a class of .container2
+
+        - toggle() : It is kind of a logic NOT, if class is present then its removed and in case, class not present it is added
+            - For example, Let's assume 'newclass' is not present
+            - document.querySelector(".container2").classList.toggle("newclass") would add 'newclass' and in case, if we use document.querySelector(".container2").classList.toggle("newclass") once again, then 'newclass' would be removed
+
+        - contains() : Used to check if a class is present or not
+            - Returns true or false
+            - For example, document.querySelector(".container2").classList.contains("bg-black") returns true
+    
+
+
+* className : This property is similar to classList but, this prop returns only the values. That is
+    - For example, document.querySelector(".container2").className returns 'container2 bg-black cyan'
