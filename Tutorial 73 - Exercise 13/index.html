@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins&display=swap');
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .card {
+            margin: auto;
+            width: 90vw;
+            height: 19vh;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            padding: 15px;
+            column-gap: 20px;
+        }
+
+        .thumbnail img {
+            height: 125px;
+            min-width: 223px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .duration {
+            position: relative;
+            bottom: 35px;
+            left: 175px;
+            background-color: black;
+            border-radius: 5px;
+            width: 40px;
+            padding: 2px;
+            text-align: center;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .title {
+            padding-top: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: large;
+            font-weight: 500;
+        }
+
+        span > img {
+            height: 10px;
+            margin-left: 5px;
+        }
+
+        .other {
+            margin-top: 10px;
+            height: 8vh;
+            display: flex;
+            column-gap: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: smaller;
+            color: rgb(165, 165, 165);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="thumbnail">
+                <img src="https://i.ytimg.com/vi/kJEsTjH5mVg/maxresdefault.jpg">
+
+                <div class="duration">31:20</div>
+            </div>
+
+            <div class="content">
+                <div class="title">
+                    Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1
+                </div>
+
+                <div class="other">
+                    <span>CodewithHarry <img src="dot.svg" alt=""></span>
+                    <span>727K views <img src="dot.svg" alt=""></span>
+                    <span>2 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
