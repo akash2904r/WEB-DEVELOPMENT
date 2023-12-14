@@ -1,0 +1,100 @@
+List of mouse events :
+https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events
+
+
+* addEventListener() : This property is used to set the event and the changes to be made when the event occurs
+    - We must pass 2 parameters for this function, one is the event and a fucntion that has the changes to be made when the event occurs
+    - For example, button.addEventListener("click", ()=> {
+                       document.body.style.backgroundColor = "black"
+                       document.body.style.color = "cyan"
+                   })
+
+
+Some of the in-built mouse events in JavaScript are : 
+
+* click : If we click using the mouse
+* dblclick : If we double-click using the mouse
+* contextmenu : If we right-click using the mouse
+* mousedown : If any of the button on mouse is used to click
+* mouseenter : If the mouse cursor is moved on the element
+* mouseleave : If the mouse cursor is moved outside of the element
+* mouseout : If the mouse cursor is moved outside of the element or or one of its children
+* mouseover : If the mouse cursor is moved on the element or one of its children
+* mouseup : If the mouse button is released on an element 
+
+
+Some of the in-built keyboard events in JavaScript are : 
+
+* keydown : If a key is pressed
+* keypress : If a key that produces character value is pressed
+* keyup : If a key is released 
+
+
+
+
+- Event bubbling is a concept that comes into picture when a child element's event is fired and due to this the parent's event is also fired
+
+- Check out the eventBubbling.html file to understand it more clearly (remove the stopPropogation() and try runnig the code) 
+
+- Inorder to stop event bubbling we use an property i.e., stopPropagation()
+    - For example, 
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("Child was clicked")
+        })
+
+    - The e in this example is called as an "event object"
+
+
+- The event object is created by the browser when an event happens and the browser puts details into it and passes it as an argument to the handler
+
+
+* removeEventListener() : This property is used to remove an event
+    - We must pass 2 parameters for this function, one is the event and a fucntion that has the changes to be made when the event occurs
+    - For example, button.removeEventListener("click", ()=> {
+                       document.body.style.backgroundColor = "black"
+                       document.body.style.color = "cyan"
+                   })
+
+
+
+
+* setInterval() : In case, if we want to repeat something again and again for every particular interval of time, then we use setInterval()
+
+    - setInterval() is a function that takes 2 parameters :
+        - An function
+        - Interval (in milliseconds)
+
+    - Syntax : setInterval(() => {
+                    // Function body
+               }, interval);
+
+    - For example, setInterval(() => {
+                       document.querySelector(".childContainer").style.   backgroundColor = getRandomColor()
+                   }, 1000);
+
+
+* clearInterval() : We can use this property to stop the repeating task assigned by setInterval()
+    - To do so, we must pass the value returned by the setInterval() function, as the parameter of clearInterval()
+
+
+
+* setTimeout() : When we want something to happen after a particular time then we can use this property
+
+    - setTimeout() is a function that takes 2 parameters :
+        - An function
+        - Interval (in milliseconds)
+
+    - setTimeout() runs only once after a particular time
+
+    - Syntax : setTimeout(() => {
+                    // Function body
+               }, interval);
+
+    - For example, setTimeout(() => {
+                       document.querySelector(".childContainer").style.   backgroundColor = "black"
+                   }, 5000);
+
+
+* clearTimeout() : We can use this property to stop the task assigned by setTimeout()
+    - To do so, we must pass the value returned by the setTimeout() function, as the parameter of clearTimeout()
