@@ -1,0 +1,146 @@
+JavaScript shows both synchronous and asynchronous nature
+
+- Synchronous actions are those actions that are initiated and finished one-by-one in a sequence
+
+- Asynchronous actions are those actions that are initiated now and are finished later 
+    - For example, setTimeout & setInterval
+
+
+
+CALLBACK FUNCTION
+
+- It is a function passed into another function as a parameter, which is then executed inside this function
+
+    - For example,
+        function loadScript(src, callback) {
+            let script = document.createElement("script")
+            script.src = src;
+            script.onload = callback("Akash")
+            document.head.append(script)
+        }
+
+    - Where the callback is an function... For example, something like
+        let callback = ()=> {
+            console.log("Inside of the callback function")
+        }
+
+
+
+- There might be a case where, the callback function itself has an callback function of its own and this can go on and on... So this kind of cases are called as "Callback Hell" or "Pyramid of Doom"
+
+    - For example,
+        function callback1(callback2) {
+            console.log("Inside callback 1")
+            callback2(callback3)
+        }
+
+        function callback2(callback3) {
+            console.log("Inside callback 2")
+        }
+
+        function callback3() {
+            console.log("Inside callback 3")
+        }
+
+        function example(callback1) {
+            console.log("Inside example")
+            callback1(callback2)
+        }
+
+
+
+
+PROMISES
+
+- The solution to the callback hell is promises
+
+- Syntax : let promise = new Promise(function(resolve, reject) {
+                                 
+           })
+
+- resolve and reject are 2 callbacks provided by JavaScript itself
+
+- They are called in this manner
+    - resolve(value) -> If the job is finished successfully
+    - reject(error) -> If the job fails
+
+
+- The promise object returned by the new Promise constructor has these properties
+    - state : Initially pending, then changes to either "fulfilled" when resolve is called (or) "rejected" when reject is called 
+    - result : Initially undefined, then changes to 'value' if resolved (or) 'error' when rejected
+
+
+
+CONSUMERS : then & catch
+
+- The consuming code can recieve the final result of a promise through then & catch
+
+- Fundamental Syntax : promise.then(function(result) {
+                                        /* handle */
+                                    }, function(error) {
+                                           /* handle error */
+                                       })
+
+- If we are interested only in successful completions, then we can just provide only then()
+    - For example, let promise = new Promise(resolve=> {
+                       setTimeout(()=> resolve("Done"), 1000)
+                   })
+
+                   promise.then(arg)
+
+
+- If we are interested only in errors, then we can just provide only catch()
+    - For example, promise.catch(arg)
+
+
+* promise.finally(()=> {}) is used to perform general cleanups
+
+
+
+PROMISE CHAINING
+
+- We can chain promises and make them pass the resolved values to one another in this manner
+
+    p1.then(function(result)=> {
+        alert(result)
+        return 2             (the reutrn value could also be p2 object)
+    }).then()...
+
+- The returned value from the first .then is recieved by the second .then and this keeps on going
+
+- Every call to .then() returns a new promise whose value is passed to the next .then()
+
+- The idea is to pass the result through the chain of .then handlers
+
+
+We can even attach multiple handlers to one promise object and they all run independently
+    - For example, p.then(handler1)
+                   p.then(handler2)
+                   p.then(handler3)
+
+
+
+PROMISE API
+
+There are 6 static methods of Promise class :
+
+* Promise.all(promises) : This method waits for all the promises to be resolved and then returns the array of their results
+    - In case, if any one fails then it becomes the error and all other results are ignored
+
+
+* Promise.allSettled(promises) : This method waits for all the promises to be settled and then returns the array of their results
+    - In case, if any one fails then also the results are displayed
+    - The results are returned in an array of objects with 'status' and 'value' (when promise is fulfilled) and if promise is rejected, then an array of objects with 'status' and 'reason' is returned
+
+
+* Promise.race(promises) : This method waits for the first promise to be settled and it's result / error becomes the outcome
+
+
+* Promise.any(promises) : This method waits for the first promise to be resolved (not rejected) and it's result becomes the outcome
+    - In case, all the promises are rejected, then an AggregateError is thrown
+
+
+* Promise.resolve(value) : This method showcases the passed value as if it was a resolved promise
+
+
+* Promise.reject(error) : This method showcases the passed error as if it was a rejected promise
