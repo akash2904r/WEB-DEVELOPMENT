@@ -1,0 +1,63 @@
+async and await are 2 keywords used to work with promises in a better way
+
+- Whenever we use async keyword along with a function it means that, that function will not interrupt with the code written in javascript and this function will run in the background as the code is being executed in the script
+
+    - For example, 
+        async function example() {
+
+        }
+
+    - An async function always returns a promise and the other values are wrapped into a promise automatically
+
+
+
+- await keyword is used to convert the asynchronous nature of the script into synchronous at certain places
+
+    - If we want to use await keyword then it must be used only within a async function 
+
+    - We may pause the code being executed until the async function is not executed completely
+
+    - For example, 
+        async function main() {
+            console.log("Loading data")          
+            let data = await getData()
+            console.log(data)
+        }
+
+
+
+When we parse the fetched data as .json() then we are returned with a javascript object and if we parse the data as .text() then we are returned with a string (or text)
+
+
+
+FETCH API
+
+- fetch() : We are required to pass a URL as a parameter for this function and it returns the data on the URL as a promise
+
+    - When we are using fetch() we have some options like, 'get request', 'post request', 'put request', 'delete request', 'options request' etc..,
+
+    - get request is used for some cases like to get data from a server
+    - post request is used for cases where we want our data to be secure like to login into a site, submit a form etc...
+    - put request is used to update
+    - delete request is used to delete things on the server
+    - options request is used to fetch meta data
+
+
+- Example for get request,
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.json())
+        .then(json => console.log(json))
+        
+
+- Example for post request,
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+            title: 'foo',
+            body: 'bar',
+            userId: 1,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
