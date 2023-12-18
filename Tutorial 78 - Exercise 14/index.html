@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 14</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins&display=swap');
+
+        body {
+            background-color: black;
+            color: darkgreen;
+            font-size: 25px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        span {
+            animation: blink 1s infinite;
+        }
+
+        .second {
+            animation-delay: 250ms;
+        }
+
+        .third {
+            animation-delay: 500ms;
+        }
+
+        @keyframes blink {
+            50% {
+                color: transparent 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Creating a hacking simulator which has green background and it shows these messages with random delay of 1 to 7 seconds
+
+        Initializing Hacking...
+        Reading your files...
+        Password files Detected...  
+        Sending all passwords and personal files to server... 
+        Cleaning up... 
+
+        The three dots must blink so that it looks like a real terminal
+    -->
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
