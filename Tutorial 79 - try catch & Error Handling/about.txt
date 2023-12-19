@@ -1,0 +1,38 @@
+Since JavaScript is forgiving in nature, it might not throw errors for some cases... Therefore we can manually throw errors for certain cases 
+
+    - For example, 
+        if(isNaN(a) || isNaN(b))
+            throw SyntaxError("The given input is not an integer")
+
+    - The above example throws an syntax error if any one of the inputs a (or) b is not a number
+
+    - throw is an statement used to throw an exception and SyntaxError is the type of error to be thrown
+
+    - List of errors in JavaScript : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors
+
+
+
+ERROR HANDLING
+
+Whenever JavaScript throws an error, we can try to handle such cases through try... catch 
+
+    - Syntax : try {
+                   
+               }
+               catch (error) {
+                   
+               }
+
+    - We write a code inside try block and if any type of error is detected then the catch block is executed... In case, no error is detected then the catch block is avoided
+
+    - If we use try... catch for an asynchronous function or method like setTimeout then it won't work, because the terminal would have left try... catch block by the time setTimeout would have completed its execution
+
+
+
+We have another code clause for try... catch i.e., finally
+
+    - The code inside the finally block runs for all cases i.e.,
+        - In case, error is found
+        - In case, error is not found
+
+    - The only reason we write a finally block is because sometimes we write try... catch blocks inside a function and also, we might be returning values in each block... And in such cases also the finally block is executed even though the function is returned
