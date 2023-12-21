@@ -1,0 +1,180 @@
+JavaScript objects have a special property called 'Prototype' that is either NULL or references another object         [[Prototype]]
+
+    - Prototype can be used to add some more properties for an object 
+
+
+
+We can manually assign an object as an prototype for another object
+
+    - For example, let animal and rabbit be two objects then,
+        rabbit.__proto__ = animal 
+
+    - The above example will set rabbit's prototype as animal i.e., rabbit.[[Prototype]] = animal
+
+
+
+CLASS 
+
+An class is an blueprint used to create an object
+
+We have an special type of method called constructor and this constructor is invoked every time we create an object of an particular class
+
+    - For example, 
+        class example {
+            constructor() {
+                console.log("I was invoked...")
+            }
+        }
+
+    - We can add members to the class using the constructor by passing parameters
+        - For example, 
+            class example {
+                constructor(name) {
+                    this.name = name
+                    console.log("I was invoked...")
+                }
+            }
+
+
+
+INHERITANCE
+
+Some times we may require same methods and properties of an class in another class and during that time we can just inherit the class
+
+We can inherit a class by using the keyword 'extends'
+
+    - For example,
+        class animal {
+            constructor(name) {
+                this.name = name
+                console.log("I was invoked...")
+            }
+
+            eats() {
+                console.log("I am eating...")
+            }
+        }
+
+        class lion extends animal {
+            constructor(name) {
+                super(name)
+                console.log("I am a lion")
+            }
+        }
+
+    - We must always call the super constructor in an derived class before accessing 'this' or else we might get an 'ReferenceError'
+
+    - When we use the super(), it invokes the parent class's constructor... We can even pass parameters also
+
+
+
+METHOD OVER-RIDING
+
+When we make changes and re-write a method of an inherited class in an derived class, it is called as method over-riding
+
+    - For example, 
+        class animal {
+            constructor(name) {
+                this.name = name
+                console.log("I was invoked...")
+            }
+
+            eats() {
+                console.log("I am eating...")
+            }
+        }
+
+        class lion extends animal {
+            constructor(name) {
+                super(name)
+                console.log("I am a lion")
+            }
+
+            eats() {
+                console.log("I eat only meat... Bring me meat")
+            }
+        }
+
+
+    - In the above example, we can see that the eats() method has been over-riden
+
+    - In case we make 2 objects one of animal and another of lion then,
+        - The object of animal will print "I am eating..." if we call the eats() method. 
+        - Whereas, the object of lion will print "I eat only meat... Bring me meat" if we call the eats() method
+
+
+
+SUPER KEYWORD
+
+'super' is an keyword through which we can execute an method of the previous class and it can be used in over-riding also
+
+    - For example, 
+        class lion extends animal {
+            constructor(name) {
+                super(name)
+                console.log("I am a lion")
+            }
+
+            eats() {
+                super.eats()
+                console.log("I eat only meat... Bring me meat")
+            }
+        }
+
+    - Syntax : super.method()
+
+    - In case, we use the eats() method of lion class now, the output would be 
+        "I am eating..."
+        "I eat only meat... Bring me meat"
+
+
+
+STATIC METHOD
+
+When we create an static method it means that, that particular method is declared only once even though we create many objects of the same class and static methods are available only for the class
+
+    - For example,
+        class example {
+            static greet() {
+                console.log("Hello")
+            }
+        }
+
+        example.greet()
+
+    - Static methods are not available for individual objects
+
+
+
+GETTER AND SETTER
+
+getter and setter are bascially used to get and set data for an object
+
+    - Syntax : get propertyName() {   /* Code */   }
+               set propertyName() {   /* Code */   }
+
+    - For example,
+        get age() {
+            return this._age
+        }
+
+        set age(value) {
+            this._age = value
+        }
+
+    - We use an underscore before the property name because, by doing return 'this.age' you're accesing the 'age' property, which triggers the getter function, which accesses the 'age' property, which triggers the getter function, which accesses the 'age' property, which triggers the getter function... Endless loop.
+
+    - The reason behind using underscore before property name for setter is same as getter 
+
+
+
+INSTANCEOF OPERATOR
+
+instanceof operator is used to check whether an object belongs to a certain class or not
+
+    - Syntax : <obj> instanceof <class>
+
+    - For example, 
+        l instanceof Lion         (true)
+        l instanceof Animal       (true)
+        a instanceof Lion         (false)
