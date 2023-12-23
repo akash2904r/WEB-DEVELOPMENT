@@ -1,0 +1,110 @@
+IIFE (Immediately Invoked Function Expression)
+
+IIFE is a JavaScript function that runs as soon as it is defined and we don't require to call this function to start its execution
+
+    - Syntax : (function() {
+                   ...
+                   ...
+               })();
+
+
+
+DESTRUCTURING
+
+Destructuring assignment is used to unpack values from an array, or properties from objects into distinct variables
+
+    - For example, 
+        - let [x, y] = [1, 2] 
+            - Here, x is assigned with 1 and y with 2 
+
+        - let [x1, y1] = [1, 2, 3] 
+            - x1 is assigned with 1, y1 with 2 and 3 is not assigned to any variable or such
+
+        - let [x2, y2, ...rest] = [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+            - x2 is assigned with 1, y2 with 2 and rest with [3, 4, 5, 6, 7, 8, 9]
+            - Here, rest is just an variable name. Therefore, we could have used anything else also
+
+
+Similarly we can destructure objects or the keys
+
+    - For example,
+        - const obj = { a : 1, b : 2, c : 3 }
+          let {a, b} = obj
+            - The above code would assign a with 1 and b with 2 as their values
+
+
+
+SPREAD (...)
+
+It is an operator used to spread or open up an array (i.e., as we saw in the destructuring examples)
+
+    - For example, 
+        function sum(a, b, c) {
+            return a + b + c
+        }
+
+        let arr = [1, 2, 3]
+        console.log(sum(arr[0], arr[1], arr[2])) is equivalent to console.log(sum(...arr))
+            - The output would be same i.e., 6
+
+        In case, the array consisted more elements than the parameter required
+
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8]
+        console.log(sum(...arr))
+            - The ouput would be same i.e., 6 because it would just take the first 3 elements as the parameter and return the value
+
+
+    - In case, if we try to spread an array into an object then 
+        const arr = [10, 20, 30]
+        const obj = {...arr}
+            - The above code would assign { 0 : 10, 1 : 20, 2 : 30 } as the key-value pair for obj i.e., the index of the array is taken as the key and the value is taken as the value for the object
+
+
+
+LOCAL, GLOBAL & BLOCK SCOPE
+
+let & const provide block level scope i.e., the variables declared inside a block {} cannot be accessed outside the block
+
+var declared within a JavaScript function becomes a local to the function whereas, a var declared outside a function becomes global
+
+
+
+HOISTING
+
+Hoisting refers to the process where the interpreter appears to move the declarations to the top of the code before execution
+
+- let & const cannot be hoisted whereas, var is the only one who can be hoisted 
+
+    - For example, 
+        function add() {
+            let a = prompt()
+            let b = prompt()
+            var sum = a + b
+            return sum
+        }
+
+        The above code is equivalent to the below code 
+
+        function add() {
+            var sum
+            let a = prompt()
+            let b = prompt()
+            sum = a + b
+            return sum
+        }
+
+        But the sum will be initialized as undefined until it reaches the line where it was actually initialized
+
+
+- Even the functions are hoisted but not the ones declared with let and const
+
+    - For example, 
+        console.log(f)
+
+        ...
+
+        var f = () => (
+            console.log("I too am hoisted")
+        )
+
+        - For the above code undefined will be shown as the output for console.log(f)
