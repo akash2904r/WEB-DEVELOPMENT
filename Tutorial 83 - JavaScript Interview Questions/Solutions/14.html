@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Scroller</title>
+
+    <style>
+        div {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        The Window Scroller: You are developing a single-page application with a smooth scrolling effect. Implement a function named smoothScrollToTop that smoothly scrolls the window to the top when called. 
+    -->
+
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis repellendus veniam perspiciatis deserunt. Ex repudiandae iusto dicta ut dolores, autem tempora sunt quas inventore beatae esse laboriosam eius, corrupti ad maxime commodi molestiae voluptas necessitatibus! Doloribus, quibusdam optio? Quo neque reiciendis nostrum harum sed soluta dolores ullam exercitationem illo! Praesentium in ad vero atque nihil ipsum culpa architecto omnis, sequi blanditiis nulla ut obcaecati minus neque? Officiis commodi, quos hic ducimus magni dicta atque id quibusdam ipsa non, tenetur corporis dignissimos. Ducimus, molestiae? Optio ducimus necessitatibus atque odio id consectetur minus, laudantium odit, molestiae soluta, nam suscipit hic alias voluptatum! Iste sit fuga facere dolorem, harum ut. Ipsum suscipit incidunt harum tenetur, ut consectetur architecto adipisci temporibus ducimus doloremque, eius, quidem unde a minima doloribus exercitationem aspernatur eligendi nisi sed consequatur. Autem velit sint possimus laborum a? Odit corrupti labore harum earum magnam, quod ipsum expedita, sequi, ea non aliquid perspiciatis adipisci nisi reprehenderit! Quia voluptatem similique nam explicabo harum quam libero, molestiae quae exercitationem labore dignissimos unde. Tenetur minus animi omnis aut assumenda laudantium hic quae incidunt, maxime alias? Veniam mollitia commodi autem minima dignissimos facere repellendus animi eius temporibus laudantium aliquid asperiores rerum, totam cupiditate facilis sapiente culpa dolorem deserunt corporis. Repellendus laudantium a debitis quaerat, pariatur, non vero cum impedit quam dolorem in! Alias, consectetur animi! Adipisci quae neque qui nesciunt perferendis nostrum aliquid porro aperiam vel, labore tenetur ipsam est similique ducimus? Perspiciatis repudiandae quaerat corrupti perferendis, doloribus exercitationem sed accusantium. Suscipit minima dolorum error numquam in, doloremque culpa, dolores eos ullam voluptates rerum aliquam obcaecati, fugiat deserunt ducimus perspiciatis esse eum! Deserunt eius porro distinctio cum perferendis sed quia tenetur et. Nam, eum? Sint, nihil optio. Atque assumenda repellat commodi et, eligendi eum molestias totam nemo corporis saepe velit. Voluptates nobis iste rerum laboriosam aliquid nulla nemo? Quibusdam recusandae quod in unde aliquid nemo assumenda praesentium? Numquam repudiandae dignissimos nesciunt repellendus consequatur modi aliquam expedita laudantium non porro, tempora quis eius aspernatur amet quas rerum repellat vero hic provident nihil consectetur assumenda perspiciatis? Dicta quis rerum consequatur repudiandae tempora, illum natus nisi veniam inventore placeat, in obcaecati ex minus repellat soluta ad beatae sequi velit eligendi harum! Omnis dolorum quaerat illo ab, alias fugiat! Consequuntur exercitationem beatae porro ipsa quos nihil repellendus iusto distinctio explicabo provident dolorum, ab recusandae quidem et sunt tempore veniam suscipit maiores obcaecati. Id omnis officiis nisi maiores impedit iure praesentium dolorem quam consequuntur, exercitationem aut, delectus mollitia natus animi. Quas saepe earum veniam, beatae dolore, exercitationem eligendi ducimus id cumque rerum, quibusdam harum mollitia obcaecati amet. Numquam voluptate quidem quae! Illum deserunt consequatur quibusdam cupiditate commodi? Illum earum hic placeat delectus dolores molestiae modi quae optio ab magnam. Sunt minus repellendus veritatis, aperiam repudiandae autem explicabo nobis illum voluptate, esse nam iusto odio rerum incidunt. Dolorum maiores nesciunt voluptatum repellendus voluptatibus perspiciatis cumque, commodi voluptas nisi sint culpa facere assumenda reprehenderit nostrum placeat cum, obcaecati asperiores, animi officia ducimus sunt voluptatem laborum aliquam quo. Dolore ullam qui rerum quae dicta!
+    </div>
+    <br><br>
+    <button>Click here to get back UP</button>
+    
+    <script>
+        document.querySelector("button").addEventListener("click", () => {
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+            });
+        })
+    </script>
+</body>
+
+</html>
