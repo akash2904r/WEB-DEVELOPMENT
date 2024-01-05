@@ -1,0 +1,27 @@
+.invert {
+    filter: invert(1);
+}
+
+.bg-black {
+    background-color: rgb(20 20 20);
+    border-radius: 12px;
+}
+
+.bg-grey {
+    background-color: rgb(31, 31, 31);
+}
+
+.grey {
+    color: rgb(182, 182, 182);
+}
+
+.font-15 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.font-14 {
+    font-size: 14.5px;
+    font-weight: 600;
+}
+
