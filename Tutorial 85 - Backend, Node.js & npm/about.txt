@@ -1,0 +1,26 @@
+Further Reference : https://nodejs.org/en/learn/getting-started/introduction-to-nodejs
+
+
+Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine
+
+
+Whenever we want to use a code for a long term, we initialize it as an npm project using 'npm init' command
+
+When we use this command we are asked with a set of questions and once filled, a file called "package.json" is created with the details entered
+
+And when we do this, it means that we have initialized it as an single entity
+
+
+
+Whenever we want to install a package, firstly we must go to the terminal and then type :
+        "npm install <package_name>" or "npm i <package_name>"
+
+
+Whenever we install a new module using npm, a folder called "node_modules" is created under which all the modules are listed
+
+Also the name of all the modules are listed in the "package.json" file under the "dependencies" section
+
+
+
+In case, if we install a package and then delete a particular package or the whole 'node_modules' folder then also the 'package.json' file will contain the package names which were installed under the 'dependencies' section and to get back these packages once again we can type the following in the terminal :
+                    "npm install" or "npm i"
