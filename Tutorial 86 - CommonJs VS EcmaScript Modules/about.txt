@@ -1,0 +1,63 @@
+We can initialize a npm project with a default value for all questions asked using the following command and these values can be modified later
+                    "npm init -y"
+                    
+
+            "npm install -g <module_name>"    (or)    "npm install --global <module_name>"
+The above command can be used to install a module globally and not for a particular project
+
+
+
+The default value of "type" in "package.json" file is "commonjs"
+
+Whenever we use "require" to import modules then it comes under CommonJs
+    - If we use this method then the modules are synchronously loaded
+    - Syntax : const http = require("node:http") (Just an example)
+
+We can export modules using CommonJs through the following method
+    - For example, module.exports = {
+                       a : 1, b : 2
+                   }
+
+                   (or)
+
+                   let c = 5
+                   module.exports = c
+
+    - We can import this using the following syntax 
+        - const a = require("./myModule_CJS")
+
+
+Whenever we use the CommonJs method to write a code in the NodeJs that code is automatically wrapped inside the following function :
+
+    - (function(exports, require, module, __filename, __dirname) {
+
+          // Module code acutally lives here
+
+      })
+
+    - Therefore, this is how we are able to access require, exports, module, __filename and __dirname even though we have not created it in our particular mdoule file
+
+
+
+
+In case, if we change the value of "type" as "module" it indicates that we are using the "EcmaScript"
+
+This method was introduced from the ES6 version i.e., EcmaScript 6
+    - If we use this method the modules are asynchronously loaded
+    - Syntax : import http from "http"
+
+
+Whenever we use the EcmaScript type to import modules then we must also export them from some other place
+    - For example, import obj from "./myModule.js"
+
+
+There are 2 types of exports :
+    1) Named export : The names of the exported values are specified and can be imported under that name only
+        - For example, export const a = 1 
+                       import {a} from "./myModule.js"
+
+    2) Default export : The name of the exported values are not specified and can be imported using any name
+        - Let obj = { x : 10, y : 20 }
+        - For example, export default obj 
+                       import obj from "./myModule.js"  (or)
+                       import pointLocation from "./myModule.js"
