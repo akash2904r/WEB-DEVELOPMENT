@@ -1,0 +1,5 @@
+This is an example of writeFileSync. I was appended using the appendFileSync method
+
+
+
+I and the new lines were appended using the promise module

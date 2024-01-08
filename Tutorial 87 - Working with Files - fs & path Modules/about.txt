@@ -1,0 +1,153 @@
+Whenever we require to create or rewrite the content of an file, we can use the following methods :
+
+    1) writeFileSync() : This function is an synchronous function i.e., whenever this method is used, the thread is blocked until this line of code is executed and then proceeds to the next line
+
+        - It takes 2 parameters :
+            - Name of the file
+            - Content of the file
+
+        - For example, 
+            - The below line will create a new file called "example.txt", since no file exists under the name "example.txt" 
+                fs.writeFileSync("example.txt", "This is an example of writeFileSync")
+            - Now, the below line will change the content of the file called "example.txt", since the file exists
+                fs.writeFileSync("example.txt", "I was rewritten")
+
+
+    2) writeFile() : This function is an asynchronous function i.e., whenever this method is used, the thread is not blocked until this line of code is executed but instead proceeds to the next line
+
+        - It takes 3 parameters :
+            - Name of the file
+            - Content of the file
+            - A callback function
+
+        - For example, 
+            - The below line will create a new file called "example2.txt", since no file exists under the name "example2.txt"
+
+                fs.writeFile("example2.txt", "This is an example of     writeFile", () => {
+                    console.log("Code is executed")
+                })
+                console.log("End")
+
+                - The output for the above code will be (since, it is a asynchronous function)
+                    End
+                    Code is executed
+
+
+            - Now, the below line will change the content of the file called "example2.txt", since the file exists
+
+                fs.writeFile("example2.txt", "I was also rewritten just like example.txt", () => {
+                    console.log("Completed")
+                })
+                console.log("End")
+
+                - The output for the above code will be (since, it is a asynchronous function)
+                    End
+                    Completed
+
+
+
+Whenever we require to read the content of an file, we can use the following methods :
+
+    1) readFileSync() : This function is an synchronous function i.e., whenever this method is used, the thread is blocked until this line of code is executed and then proceeds to the next line
+
+        - It takes 1 parameters :
+            - Name of the file
+            
+        - For example, 
+            - The below line will read the content of the file named "example.txt"
+
+                let data = fs.readFileSync("example.txt").toString()
+                console.log(data)
+
+                - In case, if we don't use the toString() function then the output will be 
+                    <Buffer 54 68 69 73 20 69 73 20 61 6e 20 65 78 61 6d 70 6c 65 20 6f 66 20 77 72 69 74 65 46 69 6c 65 53 79 6e 63>
+                - Therefore, in order to get the real data, we must use the toString() function
+                - In case, if there was any error thrown while retrieving the data i.e., like file not found, then that error is returned as the data
+
+
+    2) readFile() : This function is an asynchronous function i.e., whenever this method is used, the thread is not blocked until this line of code is executed but instead proceeds to the next line
+
+        - It takes 2 parameters :
+            - Name of the file
+            - A callback function
+
+        - For example, 
+            - The below line will read the content of the file named "example2.txt"
+
+                fs.readFile("example2.txt", (error, data) => {
+                    console.log(error, data.toString())
+                })
+                console.log("End")
+
+                - In case, if we don't use the toString() function then the output will be 
+                    <Buffer 54 68 69 73 20 69 73 20 61 6e 20 65 78 61 6d 70 6c 65 20 6f 66 20 77 72 69 74 65 46 69 6c 65>
+                - Therefore, in order to get the real data, we must use the toString() function
+                - The output for the above code will be the following because, since there is no error the error is null and assuming the content of example2 as "This is an example of writeFile", data will be the respective text
+                    End
+                    null This is an example of writeFile
+
+
+
+
+Whenever we require to add any extra content to an existing file, we can use the following methods :
+
+    1) appendFileSync() : This function is an synchronous function i.e., whenever this method is used, the thread is blocked until this line of code is executed and then proceeds to the next line
+
+        - It takes 1 parameters :
+            - Name of the file
+            - Content to be added
+            
+        - For example, 
+            - The below line will add the given content to the "example.txt" file
+                fs.appendFileSync("example.txt", ". I was appended using the appendFileSync method")
+
+                - Assuming the data of "example.txt" to be "This is an example of writeFileSync". If we read the file after the above code is run, the output will be
+                    This is an example of writeFileSync. I was appended using the appendFileSync method
+
+
+    2) appendFile() : This function is an asynchronous function i.e., whenever this method is used, the thread is not blocked until this line of code is executed but instead proceeds to the next line
+
+        - It takes 3 parameters :
+            - Name of the file
+            - Content to be added
+            - A callback function
+
+        - For example, 
+            - The below line will add the given content to the "example2.txt" file
+                fs.appendFile("example2.txt", ". I was appended using the appendFile method", () => {
+                    console.log("Finished")
+                })
+
+                - Assuming the data of "example2.txt" to be "This is an example of writeFile.". If we read the file after the above code is run, the output will be
+                    This is an example of writeFile. I was appended using the appendFile method
+
+    
+    - The content gets appended as many times as it is being run
+
+
+
+
+Whenever we import the "fs/promises" module 
+    - We can directly use "await" keyword without being inside a "async function"
+
+
+
+
+Whenever we import the "path" module we get a lot of functions along with it
+
+Let us assume myPath specifies the path of the file or the directory
+
+    - extname : Returns the extension name i.e., like .txt, .c, .java etc
+        - For example, path.extname(myPath)
+
+    - dirname : Returns the directory name
+        - For example, path.dirname(myPath)
+
+    - basename : Returns the current working directory or file
+        - For example, path.basename(myPath)
+
+    - join : Used to joing 2 or more paths together
+        - For example, path.join("d:/", "programs\\example.txt")
+        - Even though the slashes aren't specified properly, still the module will understand and give a appropriate output
+        - The output for the above join example is 
+                d:\programs\example.txt
