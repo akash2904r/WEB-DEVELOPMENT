@@ -1,0 +1,62 @@
+To download the specific version of express, we can use the following command in the terminal
+    For example, npm i express@4  -->  To download version 4
+                 npm i express@3  -->  To download version 3
+
+
+
+
+In case, if we want to copy something from the URL to the server page we can use an URL parameter (i.e., params)
+
+    - Syntax : URL:param_name
+
+    - That is, we need to use a colon (:) before writing the parameter name. This way we can create a URL parameter
+
+    - For example, URL : http://127.0.0.1:3000/blog/intro-to-queries
+
+        app.get('/blog/:slug', (req, res) => {
+            console.log(req.params)
+            res.send(`This blog is about ${req.params.slug}`)
+        })
+
+        - The console log will return   -->   { slug: 'intro-to-queries' }
+
+        - If we use the above code then the parameter here is "slug" and its value is "intro-to-queries"
+
+    - Here "req" is an object which contains the property "params" which also is an object
+
+    - We can even add multiple parameters if we wish to
+        - For example, app.get('/blog/:slug/:second:third', (req, res) => { })
+
+
+
+
+We also have another property of "req" called "query"
+
+    - Syntax : URL?query
+
+    - That is, we need to use a question mark (?) before writing the query. This way we can create a query object
+
+    - For example, URL : http://127.0.0.1:3000/blog/intro-to-queries?mode=dark&region=india&lang=js
+
+        app.get('/blog/:slug', (req, res) => {
+            console.log(req.params)
+            console.log(req.query)
+            res.send(`This blog is about ${req.params.slug}`)
+        })
+
+        - The console log will return the following,
+                { slug: 'intro-to-queries' }
+                { mode: 'dark', region: 'india', lang: 'js' }
+
+        - If we use the above code then the queries here will be "mode, region & lang" and their values would be "dark, region & js" respectively
+
+    - Similar to parameters, we can add multiple queries if we wish to
+        - We can use an and (&) as an separator for multiple queries
+        - For example, http://127.0.0.1:3000/blog/intro-to-queries?mode=dark&region=india&lang=js
+
+
+
+
+Express has a static method through which we can make files and folders public (or) visible to all
+
+    - Syntax : app.use(express.static('name_of_folder_or_file'))

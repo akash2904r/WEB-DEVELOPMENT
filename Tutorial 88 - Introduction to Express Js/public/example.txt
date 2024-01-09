@@ -1,0 +1,1 @@
+This is an public file and also an example of static method
