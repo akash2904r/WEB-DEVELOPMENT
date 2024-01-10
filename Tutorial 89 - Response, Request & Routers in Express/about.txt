@@ -1,0 +1,82 @@
+Whenever we use the "http" module, we get a set of "request" methods. Some of them are :
+
+    * get() : It is used to retrieve data from the server
+
+    * post() : It is used to submit data to the server (or) create new data on the server. This method is used when we have to send some sensitive data like passwords and also while sending files, folders, large content etc
+
+    * put() : It is used to update the existing data on the server
+
+    * delete() : It is used to delete the data on the server
+
+    * There are some more methods like head, connect, options, trace, patch etc
+
+
+        - Syntax to use these methods :
+
+                app.method_name('/', (req, res) => {
+                    res.send('Hello World! I am a <method_name> request')
+                })
+
+
+
+
+Chaining of Request
+
+app.post('/', (req, res) => {
+    console.log("Let's assume that I'm creating a data on the server")
+}).get('/', (req, res) => {
+    console.log("Now, I'm trying to retrieve the data which I created")
+}).put('/', (req, res) => {
+    console.log("Assuming that I made a mistake while creating, now I am updating the data")
+}).delete('/', (req, res) => {
+    console.log("Since, I don't require the data anymore I am deleting the data")
+}) 
+
+o/p in terminal will be "Since, I don't require the data anymore I am deleting the data"
+
+
+
+
+File Serving
+
+We can serve an file using the "res" object's methods :
+
+    - For example, if we use the res.send() method then, whatever the text written in the send() method will be shown on the site 
+
+    - In case, if we want to show the same content as in the html file then we must use the sendFile() method
+
+        - For example, 
+            app.get('/index', (req, res) => {
+                console.log("I am index and I am an html file")
+                res.sendFile('templates/index.html', {root: __dirname})
+            })
+
+            - While using this method, we need to give 2 things as the parameter
+                1) File name
+                2) Root or Absolute path of the file
+
+
+- We can use res.json() to display JavaScript
+
+- There are many more methods related to res object (Check out the Response Methods image)
+
+
+
+
+Routers
+
+- Routers are used to organize code i.e., when we use a router we are assigning a file to do a particular job
+
+- A router's job is to direct incoming requests to the right parts of our code
+
+- It also helps to manage the flow of the application more efficiently
+
+    - For example, const blog = require('./routes/blog')
+                   const shop = require('./routes/shop')
+                            .
+                            .
+                            .
+                   app.use('/blog', blog)
+                   app.use('/shop', shop)
+
+    - When we use the above 4 lines that means that we are telling JavaScript that, if a url starts with "/blog" then the "blog.js" present in routes folder will handle it and similarly, if a url starts with "/shop" then it will be handled by "shop.js" file
