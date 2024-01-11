@@ -1,0 +1,156 @@
+Middleware functions are functions that have access to the request object (req), the response object (res), and the next function
+
+next is a function in the Express router which, executes the next middleware after the current middleware, when invoked
+
+
+
+Syntax to declare an middleware :
+
+        app.use((req, res, next) => {
+            console.log('Hello, I am an middleware')
+            next()
+        })
+
+
+
+Middleware functions can perform the following tasks :
+    - Execute any code
+    - Make changes to the request and the response objects
+    - End the request-response cycle
+    - Call the next middleware in the stack
+
+
+
+If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function
+
+    - For example,
+            app.use((req, res, next) => {
+                console.log('Middleware 1')
+                next()
+            })
+
+            app.use((req, res, next) => {
+                console.log('Middleware 2')
+                next()
+            })
+
+            app.get('/', (req, res) => {
+                res.send('Hello World!')
+            })
+
+    - Even if there is only one middleware then also we must call next()
+
+
+
+In case, if we don't use the next() even though the request-response cycle isn't over, then the request will be left hanging i.e., the site will also be left hanging
+
+    - For example, 
+            app.use((req, res, next) => {
+                console.log('Middleware')
+            })
+
+            app.get('/', (req, res) => {
+                res.send('Hello World!')
+            })
+
+    - Since, we didn't call the next() function in the middleware, the control is not sent to the next middleware (or) the route handler and the request is left hanging
+
+
+
+For another instance, if the request-response cycle is over within a middleware function i.e., res.send() is specified inside a middleware itself then, we must not use the next(), because as we have already responded for the request inside the middleware itself
+
+    - For example,
+            app.use((req, res, next) => {
+                console.log('Middleware')
+                res.send('The response is sent within this middleware itself')
+            })
+
+            app.get('/', (req, res) => {
+                res.send('This will not be executed')
+            })
+
+    - Since, the response is sent within the middleware function itself, we don't require to call the next() function and we don't need to specify the res.send() inside the route handler as well
+
+    - But sending the response within a middleware is not ideal and not prefered
+
+
+
+We can even write or append data into a file within a middleware function
+
+    - For example, 
+            app.use((req, res, next) => {
+                fs.appendFileSync('public/logs.txt', `${Date.now()} is a ${req.method}\n`)
+                console.log('We are appending the time stamp and the request type inside the logs.txt file')
+                next()
+            })
+
+
+
+Ordering is very much important in middleware
+
+    - For example,
+            app.use((req, res, next) => {
+                console.log('Middleware 1')
+                req.name = 'Akash'
+                next()
+            })
+
+            app.use((req, res, next) => {
+                console.log('Middleware 2')
+                req.name = 'Deepak'
+                next()
+            })
+
+            app.get('/about', (req, res) => {
+                res.send(`Hello, I am ${req.name}`)
+            })
+
+    - This is what is happening in the above code :
+        - When we enter the first middleware, a new property called "name" with value 'Akash' is created in the "req" object
+        - As we move forward and enter the second middleware, the "name" property's value is changed to 'Deepak'
+        - When we send the response, the response sent would be :
+                        Hello, I am Deepak
+
+
+
+We have 5 types of middlewares in Express :
+
+    1) Application-level middleware : The middlewares which are written using app.use()
+
+        - For example,
+                app.use((req, res, next) => {
+                    console.log('M2')
+                    next()
+                })
+
+
+    2) Router-level middleware : The middlewares which are written for specific routes
+
+        - For example,
+                const router = express.Router()
+
+                router.use((req, res, next) => {
+                    console.log('This is a router level middleware')
+                    next()
+                })
+
+
+    3) Error-handling middleware : This middleware is used to handle errors and this middlewares have 4 arguments i.e., err, req, res, next
+
+        - For example,
+                app.use((err, req, res, next) => {
+                    console.error(err.stack)
+                    res.status(500).send('An error occured !!!')
+                })
+
+
+    4) Built-in middleware : The middlewares which comes along with express like static, json etc
+
+        - For example, app.use(express.static("public"))
+
+
+    5) Third-party middleware : The middlewares which are written by others and used by us
+
+        - For example, 
+                const cookieParser = require('cookie-parser')
+                app.use(cookieParser())
