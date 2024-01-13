@@ -1,0 +1,59 @@
+Further on ejs with express : https://github.com/mde/ejs/wiki/Using-EJS-with-Express
+
+
+
+EJS (Embedded JavaScript)
+
+- EJS is mainly used as a templating engine in web development
+- It allows you to embed JavaScript code directly in your HTML templates
+- It allows developers to embed JavaScript code directly within HTML markup, making it easier to generate dynamic content on the server side
+
+
+Some of the key aspects of EJS are : 
+
+    - Dynamic Content : 
+        - EJS enables the dynamic generation of HTML content on the server side using JavaScript
+        - You can embed JavaScript code within your HTML templates to create dynamic elements based on server-side data
+
+
+    - Variables and Data Binding:
+        - EJS allows you to use variables and expressions within your templates, facilitating data binding, where server-side data can be injected into the HTML document during rendering
+
+
+    - JavaScript Control Structures:
+        - EJS supports JavaScript control structures like loops and conditional statements
+
+    
+    - Partial Views:
+        - EJS supports the inclusion (or embedment) of partial views or templates within a larger template i.e., it allows you to break down complex UIs into smaller, reusable components
+            - Syntax : <%- include('file_name') %>
+            - In place of "file_name" we must give a .ejs file name
+            - We can send variables and even override the variable values while including the file using the below syntax :
+                    <%- include('file_name'), { key: value } %>
+            - Check out the 'index.ejs' file to understand it in a better way
+
+
+
+
+Whenever we are setting up an ejs template, we must specific the file's extension as .ejs instead of .html
+    Syntax to use variable name in index.ejs file :  <%= var_name %>
+
+    
+We can use the following code to set the view engine i.e., EJS
+            - app.set('view engine', 'ejs')
+
+
+For example, 
+    Let the content inside index.ejs file be :
+        <div> Hello, my name is <%= name %> </div>
+
+    The content inside script.js file be :
+        app.set('view engine', 'ejs')
+
+        app.get('/', (req, res) => {
+            res.render('index', {name: 'Hrudayesh'})
+        })
+
+    
+    - When the viewer visits the site, the content that he will be looking at is the following :
+                Hello, my name is Hrudayesh
