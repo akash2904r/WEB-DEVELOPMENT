@@ -1,0 +1,26 @@
+MongoDB is a popular NoSQL database management system that is designed to store, manage, and retrieve data in a flexible and scalable manner
+
+A database is a structured collection of organized data that is stored and can be easily accessed, managed, and updated
+
+
+Some key points about MongoDB are :
+
+    - MongoDB is a type of NoSQL (Not Only SQL) database, which means it doesn't follow the traditional relational database model like SQL databases (e.g., MySQL, PostgreSQL)
+
+    - Unlike SQL databases, MongoDB uses a flexible, document-oriented data model.
+
+    - MongoDB stores data in flexible, JSON-like documents, which are called BSON (Binary JSON) documents
+
+    - Each document can have a different structure, allowing you to store data in a way that fits the application's needs
+
+    - In MongoDB, a collection is like a container for storing related data. You can think of it as similar to a table in a traditional relational database
+
+    - Each collection can hold multiple documents, and these documents don't need to have the same structure or fields
+
+    - A document is a record or an entry in a collection. It's a set of key-value pairs, similar to a JSON object
+
+    - Unlike a row in a traditional database table, a document can have a dynamic and flexible structure i.e., each document within a collection can have different fields or attributes
+
+    - Unlike a relational database, in MongoDB, we don't need to set up a fixed structure (schema) for our data before storing it i.e., for example, table etc...
+
+    - MongoDB is open source, which means we can use, modify, and distribute the software freely
