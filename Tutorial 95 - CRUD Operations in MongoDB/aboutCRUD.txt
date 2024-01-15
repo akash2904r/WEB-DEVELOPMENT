@@ -1,0 +1,136 @@
+CRUD - Create, Read, Update, Delete
+
+
+
+CREATE
+
+    - To create & use an database we can use the following syntax :
+        - use('DB_name')
+        - For example, use('crudDB')
+
+
+    - To create a collection under an database we use the following syntax :
+        - db.createCollection('collection_name')
+        - For example, db.createCollection('courses')
+
+
+    - To add an document we can use 2 methods :
+
+        - db.collection_name.insertOne() : 
+            - We need to pass an object as its parameter and that particular object is added as an new document to the collection
+
+            - For example,
+                    db.courses.insertOne({
+                        name: "Harry's Sigma Web Development Course",
+                        price: 0,
+                        exercises: 15,
+                        projects: 2
+                    })
+
+        
+        - db.collection_name.insertMany() :
+            - We need to pass an array of objects as its paramter and those array of objects are added as new documents to the collection
+
+            - For example, 
+                    db.courses.insertOne([
+                        {
+                            "name": "Harry's Sigma Web Development Course",
+                            "price": 0,
+                            "exercises": 15,
+                            "projects": 2
+                        },
+                        {
+                            "name": "Coding 101: Python for Beginners",
+                            "price": 199,
+                            "exercises": 10,
+                            "projects": 1
+                        }
+                    ])
+
+
+
+
+READ
+
+    - To read an document we can use 2 methods :
+       
+        - db.collection_name.findOne() : 
+            - We need to pass an object as its parameter and if that particular object is found in the collection then it is returned, else shows the following message when console logged :
+                { cursorHasMore: false, documents: [] }
+
+            - In case, if multiple documents has the same object value as the parameter then, the first instance of the object is returned
+
+            - For example,
+                    let a = db.courses.findOne({price: 0})
+                    console.log(a)
+
+            - The above example will return the first object that contains price's value as 0
+
+
+        - db.collection_name.find() :
+            - We need to pass an object as its parameter and if that particular object is found in the collection then it is returned, else shows the following message when console logged :
+                { cursorHasMore: false, documents: [] }
+
+            - In case, if multiple documents has the same object value as the parameter then, all the instances of the object is returned
+
+            - For example,
+                    let a = db.courses.find({price: 0})
+                    console.log(a)
+
+            - The above example will return all the objects that contains price's value as 0
+
+            - In case, if we use 'a.count()' in place of 'a' then it would return the number of objects that contains price's value as 0
+
+
+
+
+UPDATE
+
+    - To update an document we can use 2 methods :
+
+        - db.collection_name.updateOne(filter, update) :
+            - filter : The document to be updated
+            - update : The updation to be applied onto the document
+
+            - For example, 
+                    db.courses.updateOne({price: 0}, {$set:{price: 100}})
+
+            - The above example will update the first object whose 'price' value is '0' into '100'
+
+            - '$set' is an operator that is used to update specific fields within a document without replacing the entire document
+
+
+        - db.collection_name.updateMany(filter, update) :
+            - filter : The document to be updated
+            - update : The updation to be applied onto the document
+
+            - For example, 
+                    db.courses.updateMany({price: 0}, {$set:{price: 1000}})
+
+            - The above example will update the all objects whose 'price' value is '0' into '1000'
+
+            - '$set' is an operator that is used to update specific fields within a document without replacing the entire document
+
+
+
+
+DELETE
+
+    - To delete an document we can use 2 methods :
+
+        - db.collection_name.deleteOne() :
+            - We need to pass an object as its parameter and if that particular object is found in the collection then it is deleted
+
+            - For example,
+                    db.courses.deleteOne({price: 100})
+
+            - The above example will delete the first document that contains the 'price' value as '100'
+
+
+        - db.collection_name.deleteMany() :
+            - We need to pass an object as its parameter and if that particular object is found in the collection then it is deleted
+
+            - For example,
+                    db.courses.deleteMany({price: 1000})
+
+            - The above example will delete all the documents that contain the 'price' value as '1000'

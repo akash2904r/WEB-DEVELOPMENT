@@ -1,0 +1,160 @@
+Further about operators : https://www.mongodb.com/docs/manual/reference/operator/query/
+
+
+
+
+Check operators.mongodb.js file to find the array of objects and for a better understanding
+
+/********************************************* Query Selectors *********************************************/
+
+    - $eq : Matches values that are equal to a specified value
+        - Syntax : { <key>: { $eq: <value> } }
+        - For example, 
+            db.querySelectors.find({ price: { $eq: 1000 } })
+        - The above example would return the "Laptop" object
+
+
+    - $gt : Matches values that are greater than a specified value
+        - Syntax : { <key>: { $gt: <value> } }
+        - For example, 
+            db.querySelectors.find({ price: { $gt: 700 } })
+        - The above example would return the "Laptop" object
+
+
+    - $gte : Matches values that are greater than or equal to a specified value
+        - Syntax : { <key>: { $gte: <value> } }
+        - For example, 
+            db.querySelectors.find({ price: { $gte: 700 } })
+        - The above example would return the "Laptop" & "Smartphone" object
+
+
+    - $in : Matches any of the values specified in an array
+        - Syntax : { <key>: { $in: [ <value1>, <value2>, ... <valueN> ] } }
+        - For example, 
+            db.querySelectors.find({ price: { $in: [8, 120, 50] } })
+        - The above example would return the "Backpack", "Coffee Table" & "Pen Set" object
+
+
+    - $lt : Matches values that are less than a specified value
+        - Syntax : { <key>: { $lt: <value> } }
+        - For example, 
+            db.querySelectors.find({ price: { $lt: 20 } })
+        - The above example would return the "Notebook" & "Pen Set" object
+
+
+    - $lte : Matches values that are less than or equal to a specified value
+        - Syntax : { <key>: { $lte: <value> } }
+        - For example, 
+            db.querySelectors.find({ price: { $lte: 20 } })
+        - The above example would return the "Book", "Notebook" & "Pen Set" object
+
+
+    - $ne : Matches all values that are not equal to a specified value
+        - Syntax : { <key>: { $ne: <value> } }
+        - For example, 
+            db.querySelectors.find({ price: { $ne: 1000 } })
+        - The above example would return all the objects except for "Laptop"
+
+
+    - $nin : Matches none of the values specified in an array
+        - Syntax : { <key>: { $nin: [ <value1>, <value2>, ... <valueN> ] } }
+        - For example, 
+            db.querySelectors.find({ category: { $nin: ["Furniture", "Stationery", "Electronics"] } })
+        - The above example would return the "Backpack" object
+
+
+
+
+/************************************************* Logical *************************************************/
+
+    - $and : Joins query clauses with a logical AND returns all documents that match the conditions of both clauses
+        - Syntax : { $and: [ { <expression1> }, { <expression2> } , ... , { <expressionN> } ] }
+        - For example,
+            db.querySelectors.find({ $and: [ 
+                { category: "Furniture" } , 
+                { stock: 5 } 
+            ] })
+        - The above example will return the "Desk Chair" object
+
+
+    - $not : Inverts the effect of a query expression and returns documents that do not match the query expression
+        - Syntax : { <key>: { $not: { <operator-expression> } } }
+        - For example,
+            db.querySelectors.find({ price: { $not: { $gt: 5 } } })
+        - The above example will return the "Notebook" object
+
+
+    - $nor : Joins query clauses with a logical NOR returns all documents that fail to match both clauses
+        - Syntax : { $nor: [ { <expression1> }, { <expression2> }, ...  { <expressionN> } ] }
+        - For example,
+            db.querySelectors.find({ $nor: [ 
+                { "category": { $in: ["Electronics", "Stationery", "Accessories"] } } , 
+                { "price": 10 } 
+            ] })
+        - The above example will return the "Desk Chair" & "Coffee Table" objects
+
+
+
+    - $or : Joins query clauses with a logical OR returns all documents that match the conditions of either clause
+        - Syntax : { $or: [ { <expression1> }, { <expression2> }, ... , { <expressionN> } ] }
+        - For example,
+            db.querySelectors.find({ $or: [ 
+                { category: "Accessories" } , 
+                { price: 130 } 
+            ] })
+        - The above example will return the "Backpack" object
+
+
+
+
+/************************************************* Element *************************************************/
+
+- $exists : Matches documents that have the specified key's value
+    - Syntax : { <key>: { $exists: <boolean> } }
+    - For example,
+        db.querySelectors.find({ category: { $exists: true , 
+            $nin: ["Electronics", "Stationery", "Furniture"] } 
+        })
+    - This query will select all documents in the "querySelectors" collection where the "category" key exists and its value does not equal "Electronics", "Stationery" or "Furniture"
+    - The above example would return the "Backpack" object
+
+
+- $type : Selects documents if a key's value is of the specified type
+    - Syntax : { <key>: { $type: <BSON type> } }
+    - For example,
+        db.querySelectors.find( { stock: { $type: 16 } } )
+    - This query will select all documents in the "querySelectors" collection where the "stock" key is of type 32-bit integer
+    - The above example would return all the objects, since all the objects have an 32-bit integer as value for the "stock" key
+    
+
+
+Available Types
+
+Type                           Number              Alias                  Notes
+
+Double                           1                "double"    
+String                           2                "string"
+Object                           3                "object"
+Array                            4                "array"
+Binary data                      5                "binData"
+Undefined                        6               "undefined"            Deprecated
+ObjectId                         7               "objectId" 
+Boolean                          8                 "bool" 
+Date                             9                 "date" 
+Null                             10                "null" 
+Regular Expression               11                "regex" 
+DBPointer                        12              "dbPointer"            Deprecated
+JavaScript                       13              "javascript" 
+Symbol                           14               "symbol"              Deprecated
+JavaScript code with scope       15          "javascriptWithScope"      Deprecated in MongoDB 4.4.
+32-bit integer                   16                "int"
+Timestamp                        17              "timestamp"
+64-bit integer                   18                "long"
+Decimal128                       19               "decimal"
+Min key                          -1               "minKey"
+Max key                         127               "maxKey"
+
+
+
+
+Check the above link to understand more about operators
