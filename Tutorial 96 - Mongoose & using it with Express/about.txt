@@ -1,0 +1,42 @@
+Further more on Mongoose : https://mongoosejs.com/docs/guide.html
+
+
+
+Mongoose is a library for Node.js and MongoDB that makes it easier to work with MongoDB
+
+It acts as a bridge between our JavaScript code and the MongoDB database
+
+
+Some keys aspects of Mongoose :
+
+    - It lets us define a structure for our data using a schema
+        - For example, 
+            const TodoSchema = new mongoose.Schema({
+                title: String,
+                desc: String,
+                isDone: Boolean,
+            })
+
+
+    - It provides a set of methods that allows us to perform common database operations (like saving, updating, and querying data) using simple JavaScript code
+        - For example, Todo.findOne(), Todo.deleteMany(), Todo.insertMany(), etc...
+
+
+    - It allows us to define rules for our data i.e., we can specify that, a certain field must contain a number only or some other datatype as well
+        - For example, 
+            const TodoSchema = new mongoose.Schema({
+                title: {type: String, required: true, default: "No Title"},
+                desc: String,
+                isDone: Boolean,
+                days: Number
+            })
+
+        - In the above example, we have defined some set of rules to create a Todo object
+
+
+    - It also lets us define middleware functions that run before or after certain database operations, giving us more control over the data
+
+
+    - It manages the connection to the MongoDB database for us
+        - For example, mongoose.connect(`mongodb://localhost:27017/todo`)
+        - The above example will connect to the local database of our system
