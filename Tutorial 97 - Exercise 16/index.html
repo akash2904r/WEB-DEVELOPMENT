@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 16</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .button {
+            width: 200px;
+            height: 200px;
+            perspective: 1000px;
+            margin: 200px 500px 100px 500px;
+            cursor: pointer;
+        }
+
+        .cuboid {
+            transform-style: preserve-3d;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: rotateX(-60deg) rotateY(30deg);
+        }
+
+        .side {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            color: white;
+            font-size: 100px;
+            border: 1px solid rgb(173, 28, 28);
+            border-radius: 10px;
+        }
+
+        .top {
+            width: 400px;
+            transform: rotateX(90deg) translateZ(100px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottom {
+            width: 400px;
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .left {
+            transform: rotateY(90deg) translateZ(300px);
+        }
+
+        .right {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .front {
+            width: 400px;
+            transform: rotateX(0deg) translateZ(100px);
+        }
+
+        .back {
+            width: 400px;
+            transform: rotateX(-180deg) translateZ(100px);
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="btn" class="button">
+        <div class="cuboid">
+            <div class="side front"></div>
+            <div class="side back"></div>
+            <div class="side left"></div>
+            <div class="side right"></div>
+            <div class="side top">Generate</div>
+            <div class="side bottom"></div>
+        </div>
+    </div>
+
+    <h1>Click me to generate dummy data</h1>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', () => {
+            console.log("Clicked...")
+
+            fetch('/clicked', {
+                method: 'POST',
+                body: JSON.stringify({ clicked: true }),
+                headers: {
+                    'Content-type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .catch(error => console.error('Error:', error));
+        })
+    </script>
+</body>
+
+</html>
