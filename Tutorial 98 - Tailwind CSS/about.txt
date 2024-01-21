@@ -1,0 +1,44 @@
+Further on Tailwind CSS : https://tailwindcss.com/docs/installation
+
+
+
+
+Tailwind CSS is a utility-first CSS framework that provides a set of pre-designed, low-level utility classes, allowing us to rapidly build responsive and customizable UIs i.e., user interfaces
+
+
+Tailwind CSS helps us to code only in HTML file, by letting us not into CSS file i.e., we get utility classes which can be used while in HTML file itself
+    For example, bg-red-500, text-white, etc.,
+
+
+Basically Tailwind CSS has a lot of utilities classes using which we can code without switching to different files, which makes us more productive
+
+
+To setup a Tailwind CSS in our system, we can follow the steps given in the 'setup.md' file
+
+
+
+Some examples of the utility classes in Tailwind CSS :
+
+    - bg-red-500 : Background color red and the 500 refers to the shade of red that we are using
+    - text-white : The text color will turn white
+    - p-0 : Padding becomes 0
+    - pl-0 : Padding-left becomes 0
+    - pr-0 : Padding-right becomes 0
+    - m-0 : Margin becomes 0
+    - mx-0 : Margin-left and Margin-right becomes 0
+    - my-0 : Margin-top and Margin-bottom becomes 0
+    - flex : The display becomes flex
+    - font-bold : The font weight becomes 700
+    - justify-between : The justify-content property of flex becomes space-between
+    - items-center : The align-items property of flex becomes center
+
+
+    BREAK POINTS
+
+    The following are bascially used to increase the responsiveness of the website i.e., it acts as a media query in Tailwind CSS and these are called as 'Break points' in Tailwind CSS
+
+        - sm : Similar to @media (min-width: 640px)
+        - md : Similar to @media (min-width: 768px)
+        - lg : Similar to @media (min-width: 1024px)
+        - xl : Similar to @media (min-width: 1280px)
+        - 2xl : Similar to @media (min-width: 1536px)
