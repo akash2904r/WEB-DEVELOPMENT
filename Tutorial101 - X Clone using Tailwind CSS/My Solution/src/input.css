@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900');
+
+@layer components {
+  .left-xl {
+    @apply flex flex-col justify-between h-[90vh] w-[7%];
+  }
+
+  .UI-lg {
+    @apply w-[695px];
+  }
+
+  .icons-xl {
+    @apply w-14 h-14 py-10;
+  }
+
+  .icons-sm {
+    @apply fixed bottom-0 w-[500px] flex bg-black justify-evenly ;
+  }
+
+  .nav-sm {
+    @apply fixed top-12 h-[52px] w-full border-t-0 border-l-0;
+  }
+
+  .settings-sm {
+    @apply fixed top-2 right-2 w-[4rem] h-[4rem];
+  }
+
+  .center-sm {
+    @apply border-r-0 w-screen mb-20;
+  }
+
+  .account-sm {
+    @apply fixed top-[-52px] left-2;
+  }
+
+  .logo-sm {
+    @apply fixed left-[42%] top-0;
+  }
+
+  .navbar-sm {
+    @apply h-[105px];
+  }
+
+  .post-sm {
+    @apply h-[40%] w-[85%] ml-[13%];
+  }
+
+  .post-dot-sm {
+    @apply ml-0 absolute right-3;
+  }
+
+  .caption-sm {
+    @apply text-sm w-3/4 break-words ml-14;
+  }
+}

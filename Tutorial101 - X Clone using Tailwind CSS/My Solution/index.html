@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>X</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bg-black w-[1270px] h-auto text-white font-blink m-auto max-xl:w-[1045px] max-lg:w-[695px]">
+    <div class="bg-black opacity-90 w-full h-[3.5rem] fixed max-xl:w-[1045px] max-lg:w-[695px] max-[480px]:h-[105px]"></div>
+    <nav class="flex items-center h-[3.5rem] w-[79.3rem] sticky top-0 max-xl:w-[1045px] max-lg:w-[695px] max-[695px]:w-auto max-sm:navbar-sm">
+        <div class="logo p-3 h-14 w-14 rounded-full cursor-pointer max-sm:logo-sm hover:bg-[#171818] mt-1">
+            <img src="assets/svgs/logo.svg" class="h-8 w-8" alt="Logo">
+        </div>
+        <div class="flex ml-[14.5rem] h-full items-center w-[39.313rem] border-[#2e3336] border-[1px] max-xl:ml-[0.5rem] max-sm:nav-sm max-sm:ml-0 max-[480px]:text-sm">
+            <div class="font-bold h-full py-3.5 px-[6.563rem] max-sm:w-[45%] max-sm:px-[15%] hover:bg-[#e7e9ea]/10 cursor-pointer">
+                <div>For you</div>
+                <div class="relative bottom-0 w-[3.75rem] mt-2.5 h-1 bg-[#1D9BF0] rounded-3xl"></div>
+            </div>
+            <div class="font-[550] py-3.5 px-28 text-[#545A5E] max-sm:w-[55%] max-sm:px-[20%] hover:bg-[#e7e9ea]/20 cursor-pointer">Following</div>
+            <div class="hover:bg-[#e7e9ea]/10 py-2 px-2 ml-3 rounded-full cursor-pointer h-[2.25rem] w-[2.25rem] max-sm:settings-sm"><img
+                    src="assets/svgs/settings.svg" class="h-5 w-5 max-sm:h-8 max-sm:w-8"></div>
+        </div>
+        <div class="bg-black h-full">
+            <div class="SearchBar flex bg-[#1f2327] w-80 gap-x-5 ml-[2rem] p-2.5 rounded-full mt-2 max-lg:hidden">
+                <img src="assets/svgs/gsearch.svg" class="h-6" alt="Search">
+                <div class="text-[#707070]">Search</div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex">
+        <section class="left w-[calc(25%-3%)] fixed max-xl:left-xl max-sm:w-0">
+            <div class="icons w-56 text-xl max-xl:w-full max-sm:icons-sm">
+                <div
+                    class="home flex gap-x-4 items-center font-bold p-3 py-3 w-36 rounded-full cursor-pointer hover:bg-[#171818] max-xl:icons-xl">
+                    <img src="assets/svgs/home.svg" class="w-8" alt="Home">
+                    <span class="max-xl:hidden">Home</span>
+                </div>
+                <div
+                    class="search flex gap-x-4 items-center p-3 py-3 w-40 rounded-full cursor-pointer hover:bg-[#171818] max-xl:icons-xl">
+                    <img src="assets/svgs/search.svg" class="w-8" alt="Search">
+                    <span class="max-xl:hidden">Explore</span>
+                </div>
+                <div
+                    class="notification flex gap-x-4 items-center p-3 py-3 w-48 rounded-full cursor-pointer hover:bg-[#171818] max-xl:icons-xl">
+                    <img src="assets/svgs/notification.svg" class="w-8" alt="Notification">
+                    <span class="max-xl:hidden">Notifications</span>
+                </div>
+                <div
+                    class="messages flex gap-x-4 items-center p-3 py-3 w-44 rounded-full cursor-pointer hover:bg-[#171818] max-xl:icons-xl">
+                    <img src="assets/svgs/messages.svg" class="w-8" alt="Messages">
+                    <span class="max-xl:hidden">Messages</span>
+                </div>
+                <div
+                    class="grok flex gap-x-4 items-center p-3 py-3 w-32 rounded-full cursor-pointer hover:bg-[#171818] max-xl:icons-xl">
+                    <img src="assets/svgs/grok.svg" class="w-8" alt="Grok">
+                    <span class="max-xl:hidden">Grok</span>
+                </div>
+                <div
+                    class="profile flex gap-x-4 items-center p-3 py-3 w-36 rounded-full cursor-pointer hover:bg-[#171818] max-xl:icons-xl max-sm:hidden">
+                    <img src="assets/svgs/profile.svg" class="w-8" alt="Profile">
+                    <span class="max-xl:hidden">Profile</span>
+                </div>
+                <div
+                    class="more flex gap-x-4 items-center p-3 py-3 w-32 rounded-full cursor-pointer hover:bg-[#171818] max-xl:icons-xl max-sm:hidden">
+                    <img src="assets/svgs/more.svg" class="w-8" alt="More">
+                    <span class="max-xl:hidden">More</span>
+                </div>
+            </div>
+            <button
+                class="bg-[#1d9bf0] text-white font-bold text-lg px-[5.625rem] py-3 mt-2 rounded-full hover:bg-[#1a8dda] max-xl:hidden">Post</button>
+            <div
+                class="account flex gap-x-3 items-center hover:bg-[#171818] w-[16.875rem] p-2 pr-1 rounded-full cursor-pointer mt-14 max-xl:w-16 max-xl:h-14 max-sm:account-sm">
+                <img src="https://cdn.myanimelist.net/s/common/uploaded_files/1475818845-585f949503fbc578c7051541de769327.jpeg"
+                    class="h-10 w-10 rounded-full" alt="Zoro">
+                <div class="pr-6 max-xl:hidden">
+                    <div class="font-bold text-white">Zoro</div>
+                    <div class="text-[#545A5E]">@King_of_the_Hell</div>
+                </div>
+                <img src="assets/svgs/dots.svg" class="h-5 max-xl:hidden" alt="Three dots">
+            </div>
+        </section>
+
+        <section class="center min-h-[62.5rem] w-[39.313rem] border-[#2e3336] border-t-0 border-[1px] ml-72 mb-12 max-xl:ml-[4rem] max-sm:ml-0 max-sm:center-sm">
+            <div class="border-[#2e3336] border-b-[1px] pb-2 max-sm:hidden">
+                <div class="flex gap-x-5 items-center pt-5 pl-5">
+                    <img src="https://cdn.myanimelist.net/s/common/uploaded_files/1475818845-585f949503fbc578c7051541de769327.jpeg"
+                        class="h-10 w-10 rounded-full" alt="Zoro">
+                    <div class="text-[#545A5E] text-xl">What is happening?!</div>
+                </div>
+                <div class="flex justify-between items-center pl-[4.688rem] pr-4 mt-4">
+                    <div class="center-icons flex gap-x-1">
+                        <div
+                            class="cursor-pointer h-8 w-8 flex justify-center items-center rounded-full hover:bg-[#1D9BF0]/20">
+                            <img src="assets/svgs/img.svg" class="h-5"></div>
+                        <div
+                            class="cursor-pointer h-8 w-8 flex justify-center items-center rounded-full hover:bg-[#1D9BF0]/20">
+                            <img src="assets/svgs/gif.svg" class="h-5"></div>
+                        <div
+                            class="cursor-pointer h-8 w-8 flex justify-center items-center rounded-full max-[695px]:hidden hover:bg-[#1D9BF0]/20">
+                            <img src="assets/svgs/poll.svg" class="h-5"></div>
+                        <div
+                            class="cursor-pointer h-8 w-8 flex justify-center items-center rounded-full hover:bg-[#1D9BF0]/20">
+                           <img src="assets/svgs/emoji.svg" class="h-5"></div>
+                        <div
+                            class="cursor-pointer h-8 w-8 flex justify-center items-center rounded-full max-[695px]:hidden hover:bg-[#1D9BF0]/20">
+                            <img src="assets/svgs/schedule.svg" class="h-5"></div>
+                        <div class="h-8 w-8 flex justify-center items-center rounded-full"><img
+                                src="assets/svgs/location.svg" class="h-5"></div>
+                    </div>
+                    <button
+                        class="bg-[#1d9bf0] text-white font-bold px-4 py-1.5 mt-2 text-[15px] rounded-full opacity-50 cursor-default">Post</button>
+                </div>
+            </div>
+            <div
+                class="border-[#2e3336] border-b-[1px] p-3 text-[#008ed8] text-center max-sm:w-full hover:bg-white/[.03] cursor-pointer">
+                Show 250 posts</div>
+            <div class="posts w-full">
+                <div class="post w-full hover:bg-white/[.03] cursor-pointer">
+                    <div class="flex flex-col justify-between items-center w-full">
+                        <div class="flex gap-x-1 items-top pt-3 pl-7 w-full">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlVLeD-V6lbcAKu6l7gHAcNJzVfnaeaRL7UYR7E_zZT_bDY9oH2zCttJfDcRvocAZk1PY&usqp=CAU"
+                                class="h-10 w-10 rounded-full object-cover" alt="Shanks">
+                            <div class="font-bold text-[15px] max-[480px]:text-sm hover:underline flex items-top gap-x-1 pl-2">Shanks</div>
+                            <div class="text-[#707070] text-sm max-[480px]:text-xs">@redhaired</div>
+                            <img src="assets/svgs/dot.svg" class="h-3">
+                            <div class="text-[#707070] text-sm max-[480px]:text-xs">29m</div>
+                            <div class="h-7 w-7 ml-[20.625rem] max-sm:post-dot-sm hover:bg-[#1D9BF0]/20 rounded-full"><img
+                                    src="assets/svgs/gdots.svg" class="h-5 w-5 mx-auto mt-1">
+                            </div>
+                        </div>
+                        <div class="ml-[10.3rem] mt-[-1.125rem] text-[15px] w-full max-[480px]:caption-sm">Various Stages of Coding during Web
+                            Development</div>
+                    </div>
+                    <div class="post-img w-full">
+                      <img src="https://blog.webix.com/wp-content/uploads/2021/07/15.jpg"
+                            class="w-[33.125rem] h-[31.25rem] ml-20 mt-3 rounded-3xl border-[#2e3336] border-[1px] max-sm:post-sm">
+                    </div>
+                    <div
+                        class="post-icons flex justify-between text-[15px] text-[#707070] pl-20 pr-5 py-3 border-[#2e3336] border-b-[1px] max-[480px]:text-xs max-[480px]:pl-12 max-[480px]:pr-1">
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20"><img
+                                src="assets/svgs/comment.svg" class="h-5">7</div>
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#00BA7C]/20"><img
+                                src="assets/svgs/repost.svg" class="h-5">168</div>
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#F91880]/20"><img
+                                src="assets/svgs/heart.svg" class="h-5">481</div>
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20"><img
+                                src="assets/svgs/view.svg" class="h-5">5.3K</div>
+                        <div class="flex">
+                            <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20">
+                                <img src="assets/svgs/save.svg" class="h-5"></div>
+                            <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20">
+                                <img src="assets/svgs/share.svg" class="h-5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post w-full hover:bg-white/[.03] cursor-pointer">
+                    <div class="flex flex-col justify-between items-center w-full">
+                        <div class="flex gap-x-1 items-top pt-3 pl-7 w-full">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8IuuDjoVX1X4nogT6N9ZqKE9uoTYkU8eSzQ&usqp=CAU"
+                                class="h-10 w-10 rounded-full object-cover" alt="Luffy">
+                            <div class="font-bold text-[15px] max-[480px]:text-sm hover:underline flex items-top gap-x-1 pl-2">Luffy</div>
+                            <div class="text-[#707070] text-sm max-[480px]:text-xs">@strawhat</div>
+                            <img src="assets/svgs/dot.svg" class="h-3">
+                            <div class="text-[#707070] text-sm max-[480px]:text-xs">54m</div>
+                            <div class="h-7 w-7 ml-[22.063rem] max-sm:post-dot-sm hover:bg-[#1D9BF0]/20 rounded-full"><img
+                                    src="assets/svgs/gdots.svg" class="h-5 w-5 mx-auto mt-1">
+                            </div>
+                        </div>
+                        <div class="ml-[10.1rem] mt-[-1.125rem] text-[15px] w-full max-[480px]:text-sm">When you are new to Web Development</div>
+                    </div>
+                    <div class="post-img w-full">
+                        <img src="https://i.imgflip.com/6quqku.jpg"
+                            class="w-[33.125rem] h-[31.25rem] ml-20 mt-3 rounded-3xl border-[#2e3336] border-[1px] max-sm:post-sm">
+                    </div>
+                    <div
+                        class="post-icons flex justify-between text-[15px] text-[#707070] pl-20 pr-5 py-3 border-[#2e3336] border-b-[1px] max-[480px]:text-xs max-[480px]:pl-12 max-[480px]:pr-1">
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20"><img
+                                src="assets/svgs/comment.svg" class="h-5">145</div>
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#00BA7C]/20"><img
+                                src="assets/svgs/repost.svg" class="h-5">172</div>
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#F91880]/20"><img
+                                src="assets/svgs/heart.svg" class="h-5">343</div>
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20"><img
+                                src="assets/svgs/view.svg" class="h-5">1M</div>
+                        <div class="flex">
+                            <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20">
+                                <img src="assets/svgs/save.svg" class="h-5"></div>
+                            <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20">
+                                <img src="assets/svgs/share.svg" class="h-5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post w-full hover:bg-white/[.03] cursor-pointer">
+                    <div class="flex flex-col justify-between items-center w-full">
+                        <div class="flex gap-x-1 items-top pt-3 pl-7 w-full">
+                            <img src="https://i.pinimg.com/736x/64/ed/c2/64edc2f1f217d35f4474705fe9113e00.jpg"
+                                class="h-10 w-10 rounded-full object-cover" alt="Buggy">
+                            <div class="font-bold text-[15px] max-[480px]:text-sm hover:underline flex items-top gap-x-1 pl-2">Buggy</div>
+                            <div class="text-[#707070] text-sm max-[480px]:text-xs">@thegeniusjester</div>
+                            <img src="assets/svgs/dot.svg" class="h-3">
+                            <div class="text-[#707070] text-sm max-[480px]:text-xs">29m</div>
+                            <div class="h-7 w-7 ml-[18.75rem] max-sm:post-dot-sm hover:bg-[#1D9BF0]/20 rounded-full"><img
+                                    src="assets/svgs/gdots.svg" class="h-5 w-5 mx-auto mt-1">
+                            </div>
+                        </div>
+                        <div class="ml-[10.1rem] mt-[-1.125rem] text-[15px] w-full max-[480px]:text-sm">Why does the functions not work ???</div>
+                    </div>
+                    <div class="post-img w-full">
+                        <img src="https://uploads-ssl.webflow.com/5f3c19f18169b62a0d0bf387/60d33bed9c10a58c67d5e458_g3aUbBRKfdR_6OG1TCTnUbr6646sydM67yBSoKQY1bK3gi4o6eUUkFqUrWc6Sg-ycGJ1zUn3SWhgSfh_A1-F10cvgmKPFM2cae0Vgt500TDqVezLt_-l6fQQYKHda_-kp-0OgW6A.png"
+                            class="w-[33.125rem] h-[31.25rem] ml-20 mt-3 rounded-3xl border-[#2e3336] border-[1px] max-sm:post-sm">
+                    </div>
+                    <div
+                        class="post-icons flex justify-between text-[15px] text-[#707070] pl-20 pr-5 py-3 border-[#2e3336] border-b-[1px] max-[480px]:text-xs max-[480px]:pl-12 max-[480px]:pr-1">
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20"><img
+                                src="assets/svgs/comment.svg" class="h-5">12</div>
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#00BA7C]/20"><img
+                                src="assets/svgs/repost.svg" class="h-5">258</div>
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#F91880]/20"><img
+                                src="assets/svgs/heart.svg" class="h-5">192</div>
+                        <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20"><img
+                                src="assets/svgs/view.svg" class="h-5">267K</div>
+                        <div class="flex">
+                            <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20">
+                                <img src="assets/svgs/save.svg" class="h-5"></div>
+                            <div class="flex h-10 w-10 rounded-full justify-center items-center hover:bg-[#1D9BF0]/20">
+                                <img src="assets/svgs/share.svg" class="h-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="right pl-8 h-[62.5rem] mb-28 max-lg:hidden">
+            <div class="Subscribe bg-[#15181c] w-80 pl-6 p-2.5 rounded-2xl mt-2">
+                <div class="font-bold text-xl">Subscribe to Premium</div>
+                <div class="text-[15px] mt-1.5">Subscribe to unlock new features and if eligible, receive a share of ads
+                    revenue.</div>
+                <button
+                    class="bg-[#1d9bf0] hover:bg-[#1a8dda] text-white font-bold py-1.5 px-3 mt-2 mb-1 rounded-full">Subscribe</button>
+            </div>
+            <div class="Trending text-[#707070] bg-[#15181c] w-80 rounded-2xl mt-4 text-[13px]">
+                <div class="font-extrabold text-xl text-white py-3 pl-6">What's happening</div>
+                <div class="hover:bg-[#1f2327] pl-6 pt-2 cursor-pointer">
+                    <div class="text-white font-extrabold text-sm">#PunchEV</div>
+                    <div>An SUV that takes you #BeyondEveryday!</div>
+                    <div class="flex items-center gap-x-1 pb-2">
+                        <img src="assets/svgs/ev.svg" class="h-3">
+                        <div>Promoted by TATA.ev</div>
+                    </div>
+                </div>
+                <div class="hover:bg-[#1f2327] pl-6 cursor-pointer">
+                    <div class="flex items-end justify-between pt-1 pr-2">
+                        <div>Trending in India</div>
+                        <div class="h-7 w-7 rounded-full hover:bg-[#1D9BF0]/20"><img src="assets/svgs/gdots.svg"
+                                class="h-5 mx-auto mt-1"></div>
+                    </div>
+                    <div class="text-white font-extrabold text-sm">#plantstalk</div>
+                    <div class="pb-2">Scientists Capture Plants "Talking"</div>
+                </div>
+                <div class="hover:bg-[#1f2327] pl-6 cursor-pointer">
+                    <div class="flex items-end justify-between pt-1 pr-2">
+                        <div>Trending</div>
+                        <div class="h-7 w-7 rounded-full hover:bg-[#1D9BF0]/20"><img src="assets/svgs/gdots.svg"
+                                class="h-5 mx-auto mt-1"></div>
+                    </div>
+                    <div class="text-white font-extrabold text-sm">#OnePiece</div>
+                    <div class="pb-2">50.6K posts</div>
+                </div>
+                <div class="hover:bg-[#1f2327] pl-6 cursor-pointer">
+                    <div class="flex items-end justify-between pt-1 pr-2">
+                        <div>Entertainment Trending</div>
+                        <div class="h-7 w-7 rounded-full hover:bg-[#1D9BF0]/20"><img src="assets/svgs/gdots.svg"
+                                class="h-5 mx-auto mt-1"></div>
+                    </div>
+                    <div class="text-white font-extrabold text-sm">#TheGreatestOfAllTime</div>
+                    <div class="pb-2">29.2K posts</div>
+                </div>
+                <div class="hover:bg-[#1f2327] pl-6 cursor-pointer">
+                    <div class="flex items-end justify-between pt-1 pr-2">
+                        <div>Sports Trending</div>
+                        <div class="h-7 w-7 rounded-full hover:bg-[#1D9BF0]/20"><img src="assets/svgs/gdots.svg"
+                                class="h-5 mx-auto mt-1"></div>
+                    </div>
+                    <div class="text-white font-extrabold text-sm">#Cricket</div>
+                    <div class="pb-2">12.3K posts</div>
+                </div>
+                <div class="text-cyan-600 text-[15px] py-3 hover:bg-[#1f2327] pl-6 cursor-pointer rounded-b-2xl">Show
+                    more</div>
+            </div>
+            <div class="FollowList mt-4 bg-[#15181c] rounded-2xl">
+                <div class="font-extrabold text-xl text-white py-3 pl-6">Who to follow</div>
+                <div class="flex gap-x-5 py-2.5 pl-6 items-center hover:bg-[#1f2327] cursor-pointer">
+                    <div><img
+                            src="https://w0.peakpx.com/wallpaper/920/960/HD-wallpaper-shinigami-kenpachi-zaraki-anime-bleach-11th-division-manga-soul-captain-i-am-kenpachi-thousand-year-blood-war-arc.jpg"
+                            class="h-10 w-10 rounded-full"></div>
+                    <div>
+                        <div class="font-bold text-[15px] hover:underline flex items-center gap-x-1">Zaraki <img
+                                src="assets/svgs/verified.svg" class="h-5"></div>
+                        <div class="text-[#707070] text-sm">@zarakikenpachi</div>
+                    </div>
+                    <button
+                        class="px-3 py-1.5 bg-white text-gray-700  rounded-3xl text-sm font-[550] ml-8">Follow</button>
+                </div>
+                <div class="flex gap-x-5 py-2.5 pl-6 items-center hover:bg-[#1f2327] cursor-pointer">
+                    <div><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS57_ev8nSLDV6btZeFYDegpOFYXof1LogY9g&usqp=CAU"
+                            class="h-10 w-10 rounded-full"></div>
+                    <div>
+                        <div class="font-bold text-[15px] hover:underline flex items-center gap-x-1">Itachi <img
+                                src="assets/svgs/verified.svg" class="h-5"></div>
+                        <div class="text-[#707070] text-sm">@uchihaitachi</div>
+                    </div>
+                    <button
+                        class="px-3 py-1.5 bg-white text-gray-700  rounded-3xl text-sm font-[550] ml-[3.3rem]">Follow</button>
+                </div>
+                <div class="flex gap-x-5 py-2.5 pl-6 items-center hover:bg-[#1f2327] cursor-pointer">
+                    <div><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsNjOO3YT7wjKv_-n6m8SdFZJtfTLJRAfMqA&usqp=CAU"
+                            class="h-10 w-10 rounded-full object-cover"></div>
+                    <div>
+                        <div class="font-bold text-[15px] hover:underline flex items-center gap-x-1">Yami <img
+                                src="assets/svgs/verified.svg" class="h-5"></div>
+                        <div class="text-[#707070] text-sm">@yamisukehiro</div>
+                    </div>
+                    <button
+                        class="px-3 py-1.5 bg-white text-gray-700 rounded-3xl text-sm font-[550] ml-[2.8rem]">Follow</button>
+                </div>
+                <div class="text-cyan-600 text-[15px] py-3 hover:bg-[#1f2327] pl-6 cursor-pointer rounded-b-2xl">Show
+                    more</div>
+            </div>
+            <div class="Links text-xs w-80 flex gap-x-4 gap-y-1 flex-wrap px-4 mt-5">
+                <div><a class="text-[#707070] hover:underline decoration-[#707070]" href="/">Terms of Service</a></div>
+                <div><a class="text-[#707070] hover:underline decoration-[#707070]" href="/">Privacy Policy</a></div>
+                <div><a class="text-[#707070] hover:underline decoration-[#707070]" href="/">Cookie Policy</a></div>
+                <div><a class="text-[#707070] hover:underline decoration-[#707070]" href="/">Accessibility</a></div>
+                <div><a class="text-[#707070] hover:underline decoration-[#707070]" href="/">Ads info</a></div>
+                <div>
+                    <a class="text-[#707070] hover:underline decoration-[#707070]" href="/">More</a>
+                    <img src="assets/svgs/gdots.svg" class="h-3 inline">
+                </div>
+                <div class="text-[#707070] decoration-[#707070]">&copy; 2024 X Corp.</div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
