@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without React</title>
+
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+        }
+
+        #counter {
+            font-size: xx-large;
+            font-weight: bolder;
+            color: white;
+        }
+
+        #btn {
+            margin-top: 20px;
+            padding: 25px 50px;
+            background-color: red;
+            color: white;
+            border: 2px solid red;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="counter">0</div>
+    <button id="btn">Click Me</button>
+
+    <script>
+        document.getElementById("btn").addEventListener(("click"), () => {
+            let num = parseInt(document.getElementById("counter").innerHTML)
+            document.getElementById("counter").innerHTML = num + 1
+        })
+    </script>
+</body>
+
+</html>

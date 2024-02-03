@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to React</title>
+
+    <style>
+        .container {
+            display: flex;
+            column-gap: 10px;
+            justify-content: center;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 2px solid red;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let box1 = "I am box 1"
+        let box2 = "I am box 2"
+        let box3 = "I am box 3"
+    </script>
+
+    <div class="container">
+        <div id="box1" class="box">Box 1</div>
+        <div id="box2" class="box">Box 2</div>
+        <div id="box3" class="box">Box 3</div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById("box1").innerHTML = "Sigma"
+        }, 1000);
+
+        setTimeout(() => {
+            document.getElementById("box2").innerHTML = "Web Development"
+        }, 2000);
+
+        setTimeout(() => {
+            document.getElementById("box3").innerHTML = "Course"
+        }, 3000);
+    </script>
+</body>
+
+</html>
