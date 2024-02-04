@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(31, 30, 30);
+    color: cyan;
+    padding: 20px 40px;
+    justify-content: flex-end;
+    font-size: large;
+}
+
+ul {
+    display: flex;
+    gap: 35px;
+}
+
+li {
+    list-style-type: none;
+}

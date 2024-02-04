@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cards {
+  display: flex;
+  column-gap: 40px;
+  margin: 50px;
+}
