@@ -1,0 +1,31 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cyan {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  background-color: cyan;
+  color: black;
+  font-size: xx-large;
+  font-weight: 700;
+  position: absolute;
+  left: 30px;
+}
+
+input {
+  margin: 25px 10px 0 0;
+  padding: 15px;
+  font-size: large;
+}
+
+input::placeholder {
+  color: rgb(173, 173, 173);
+}
